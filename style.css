@@ -38,25 +38,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: end;
-  background-color: rgb(8, 56, 56);
 }
 
 .menu .menu-cover {
   text-transform: uppercase;
   font-family: sans-serif;
-  color: rgba(0, 0, 0);
   display: flex;
   align-items: center;
-  gap: 35px;
-  background-color: aqua;
+}
+
+.menu .menu-cover p {
+  color: white;
+  margin: 2px 4px;
+  padding: 0 1em;
+  border: 1px solid green;
+  border-top-left-radius: 0.5em;
 }
 
 .menu .menu-cover p:hover {
   cursor: pointer;
+  border-top-left-radius: 0;
+  transition: 0.2s;
+  transform: translate(-2px, -1px);
+  box-shadow: 2px 1px 3px rgb(6, 255, 2);
 }
 
 .menu .menu-cover .kontak {
-  background-color: red;
 }
 
 .menu .menu-cover .kontak p {
@@ -98,24 +105,24 @@ body {
 }
 
 .nav-container .log-in .container-login p:hover {
-  transition: 0.3s;
-  transform: translate(0, -3px);
-  box-shadow: 5px 5px 3px black;
+  border-top-left-radius: 0;
+  transition: 0.1s;
+  transform: translate(-2px, -1px);
+  box-shadow: 2px 1px 3px rgb(6, 255, 2);
 }
 
 .nav-container .log-in .container-login :nth-child(1),
 .nav-container .log-in .container-login :nth-child(2) {
+  border-top-left-radius: 0.5em;
   cursor: pointer;
   padding: 0.5em 1em;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 3px 3px 2px black;
+  border: 1px solid green;
 }
 
 .nav-container .log-in .container-login :nth-child(3) {
   cursor: pointer;
   padding: 0.5em 1em;
   border-radius: 0.5em;
-  border: 1px solid rgb(255, 255, 255);
   box-shadow: 3px 3px 0 rgb(0, 0, 0);
   background-color: green;
 }
