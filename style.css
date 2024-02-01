@@ -35,6 +35,14 @@ body {
   letter-spacing: 6px;
 }
 
+.logo span {
+  transition: 0.3s;
+}
+
+.logo span:hover {
+  transform: scale(2);
+}
+
 /* MENU BAGIAN TENGAH */
 
 .menu {
@@ -68,6 +76,7 @@ body {
 }
 
 .menu .menu-cover .kontak {
+  color: red;
 }
 
 .menu .menu-cover .kontak p {
