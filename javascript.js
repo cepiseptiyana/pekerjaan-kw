@@ -15,7 +15,7 @@ switchFoto.addEventListener("click", function (event) {
     leftFoto.classList.add("fade");
     setTimeout(function () {
       leftFoto.classList.remove("fade");
-    }, 2000);
+    }, 1000);
   }
 });
 
