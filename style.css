@@ -165,30 +165,18 @@ body {
 }
 
 .left {
+  grid-area: left;
   cursor: pointer;
   border: 1px solid white;
-  grid-area: left;
-  width: 350px;
-  height: 350px;
   transition: 0.5s;
+}
+
+.left img {
+  width: 400px;
 }
 
 .left:hover {
-  transform: rotate(45deg);
-}
-
-.left .foto {
-  width: 350px;
-  height: 350px;
-  background-size: cover;
-  background-image: url(foto/CAMERA.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: 0.5s;
-}
-
-.left .foto:hover {
-  transform: rotate(-45deg);
+  transform: scale(1.1);
 }
 
 .kanan-atas {
@@ -236,69 +224,23 @@ body {
   padding: 1em;
 }
 
-.kanan-tengah .container .kotak-1 {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(foto/CAMERA.jpg);
+.kanan-tengah .container .kotak {
   border: 2px solid rgb(255, 255, 255);
   cursor: pointer;
   width: 150px;
   height: 100px;
-  transition: 0.5s;
 }
 
-.kanan-tengah .container .kotak-1:hover {
-  transform: scale(1.2);
-}
-
-.kanan-tengah .container .kotak-2 {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(foto/CAMERA.jpg);
-  border: 2px solid rgb(255, 255, 255);
-  cursor: pointer;
+.kanan-tengah .container .kotak img {
   width: 150px;
   height: 100px;
-  transition: 0.5s;
 }
 
-.kanan-tengah .container .kotak-2:hover {
-  transform: scale(1.2);
+.fade {
+  animation: fade 1s;
 }
 
-.kanan-tengah .container .kotak-3 {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(foto/CAMERA.jpg);
-  border: 2px solid rgb(255, 255, 255);
-  cursor: pointer;
-  width: 150px;
-  height: 100px;
-  transition: 0.5s;
-}
-
-.kanan-tengah .container .kotak-3:hover {
-  transform: scale(1.2);
-}
-
-.kanan-tengah .container .kotak-4 {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(foto/CAMERA.jpg);
-  border: 2px solid rgb(255, 255, 255);
-  cursor: pointer;
-  width: 150px;
-  height: 100px;
-  transition: 0.2s;
-}
-
-.kanan-tengah .container .kotak-4:hover {
-  transform: scale(1.2);
-}
+/* KANAN BAWAH */
 
 .kanan-bawah {
   grid-area: kananbawah;
@@ -349,4 +291,14 @@ footer {
 footer .container {
   background-color: blue;
   display: flex;
+}
+
+/* animation */
+@keyframes fade {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
