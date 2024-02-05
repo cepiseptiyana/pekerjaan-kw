@@ -39,12 +39,11 @@ const images = ["1.png", "CAMERA.jpg", "wee.jpg"];
 const headings = ["New York, USA", "Tokyo, Japan", "Dubai, UAE"];
 const descriptions = [
   "the city that never sleeps",
-  "the city of lights",
+  "the city of anime",
   "home to the tallest skyscraper",
 ];
 
 // SLIDER ID
-let id = 0;
 // the slider function
 function slide(id) {
   // set the background image
@@ -62,13 +61,12 @@ function slide(id) {
 }
 
 // add click even to left arrow
+let id = 0;
 arrLeft.addEventListener("click", function () {
   // decrement image id
   id--;
-  // check if id is smaller than the number if available slides
-  if (id < 0) {
-    id = images.length - 1;
-  }
+  // check if id is smaller than the number of available slides
+  id < 0 ? (id = images.length - 1) : "false";
   // run the slide function
   slide(id);
 });
@@ -77,9 +75,7 @@ arrRight.addEventListener("click", function () {
   // increment image id
   id++;
   // check if id is greater than the number of available slides
-  if (id > images.length - 1) {
-    id = 0;
-  }
+  id > images.length - 1 ? (id = 0) : "false";
   // run the slide function
   slide(id);
 });
