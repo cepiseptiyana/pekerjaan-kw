@@ -58,11 +58,11 @@ body {
 }
 
 .menu .menu-cover p {
+  font-size: 1.2em;
   color: rgb(0, 0, 0);
   margin: 2px 4px;
   padding: 0 1em;
   border-top-left-radius: 0.5em;
-  box-shadow: 0 0 2px blue;
 }
 
 .menu .menu-cover p:hover {
@@ -70,7 +70,6 @@ body {
   border-top-left-radius: 0;
   transition: 0.2s;
   transform: translate(-2px, -1px);
-  box-shadow: 2px 1px 5px blue;
 }
 
 .menu .menu-cover .kontak p {
@@ -105,7 +104,6 @@ body {
   color: rgb(0, 0, 0);
   font-family: sans-serif;
   border-top-left-radius: 1em;
-  box-shadow: 0 0 5px blue;
   display: flex;
   width: 500px;
   justify-content: space-evenly;
@@ -116,11 +114,11 @@ body {
   border-top-left-radius: 0;
   transition: 0.1s;
   transform: translate(-2px, -1px);
-  box-shadow: 2px 1px 3px blue;
 }
 
 .nav-container .log-in .container-login :nth-child(1),
 .nav-container .log-in .container-login :nth-child(2) {
+  font-size: 1.2em;
   border-top-left-radius: 0.5em;
   cursor: pointer;
   padding: 0.5em 1em;
@@ -128,6 +126,7 @@ body {
 }
 
 .nav-container .log-in .container-login :nth-child(3) {
+  font-size: 1.2em;
   color: white;
   cursor: pointer;
   padding: 0.5em 1em;
@@ -262,21 +261,72 @@ body {
   padding: 0.5em;
 }
 
-.container-market .market {
+.container-market .image-slider {
+  margin: auto;
+  max-width: 40em;
+  min-height: 20em;
+  position: relative;
+  background-image: url(foto/1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+}
+
+.container-market .image-slider * {
+  box-sizing: border-box;
+}
+
+.container-market .image-slider .caption {
+  background: linear-gradient(to bottom, rgb(0, 0, 0, 0), black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2em;
+  text-align: center;
+}
+
+.container-market .image-slider .caption h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.container-market .image-slider .caption p {
+  color: #8a8a8a;
+}
+
+.container-market .image-slider .arrow-left,
+.container-market .image-slider .arrow-right {
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
   display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.container-market .market .foto1 img {
-  width: 20em;
-  box-shadow: -2px 0 4px rgb(173, 182, 129), 2px 0 4px rgb(173, 182, 129);
+.container-market .image-slider .arrow-left:hover,
+.container-market .image-slider .arrow-right:hover {
+  background-color: #000;
+  color: #fff;
 }
 
-.container-market .market .foto2 img {
-  width: 20em;
+.container-market .image-slider .arrow-left {
+  right: 100%;
+}
+
+.container-market .image-slider .arrow-right {
+  left: 100%;
+}
+
+.image-fade {
+  animation: imgFade 0.5s ease-in-out;
 }
 
 /* FOOTER */
@@ -292,11 +342,23 @@ footer .container {
 }
 
 /* animation */
+
+/* IMAGE GALERY JUMBOTRON */
 @keyframes fade {
   from {
     transform: scale(0);
   }
   to {
     transform: scale(1);
+  }
+}
+
+/* IMAGE GALERY MARKETPLACE */
+@keyframes imgFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
