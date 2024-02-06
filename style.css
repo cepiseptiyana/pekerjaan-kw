@@ -10,9 +10,7 @@ body {
 /* CONTAINER-NAVBAR */
 
 .nav-container {
-  background-color: white;
   padding: 20px;
-  height: 3.5rem;
   display: grid;
   grid-template-columns: 200px 1fr 1fr;
   grid-template-rows: auto;
@@ -25,7 +23,6 @@ body {
 
 .logo {
   align-items: center;
-  border: 1px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   display: flex;
   font-size: 2em;
@@ -54,15 +51,14 @@ body {
   text-transform: uppercase;
   font-family: sans-serif;
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  align-items: end;
 }
 
 .menu .menu-cover p {
-  font-size: 1.2em;
+  margin: 0;
   color: rgb(0, 0, 0);
-  margin: 2px 4px;
-  padding: 0 1em;
-  border-top-left-radius: 0.5em;
+  padding: 0.5em;
 }
 
 .menu .menu-cover p:hover {
@@ -70,27 +66,24 @@ body {
   border-top-left-radius: 0;
   transition: 0.2s;
   transform: translate(-2px, -1px);
+  background-color: #ffebeb;
+  border-radius: 0.5em;
 }
 
-.menu .menu-cover .kontak p {
-  background-color: blue;
+.menu .menu-cover .kontak p:hover {
+  background-color: #006cf9;
   color: white;
-  display: flex;
-  align-items: center;
-}
-
-.menu .menu-cover .box {
-  position: absolute;
-  background-color: rgb(120, 120, 167);
-  padding: 2em;
-}
-
-.menu .menu-cover .toggle {
-  display: none;
 }
 
 .menu .menu-cover .box .kolom {
   display: flex;
+  position: absolute;
+  background-color: rgb(120, 120, 167);
+  left: 0;
+}
+
+.menu .menu-cover .box.toggle {
+  display: none;
 }
 
 /* MENU BAGIAN KANAN */
@@ -103,35 +96,29 @@ body {
 .nav-container .log-in .container-login {
   color: rgb(0, 0, 0);
   font-family: sans-serif;
-  border-top-left-radius: 1em;
   display: flex;
   width: 500px;
   justify-content: space-evenly;
   align-items: center;
 }
 
+.nav-container .log-in .container-login :nth-child(1),
+.nav-container .log-in .container-login :nth-child(2),
+.nav-container .log-in .container-login :nth-child(3) {
+  font-size: 1em;
+  cursor: pointer;
+  padding: 0.5em 1em;
+}
+
 .nav-container .log-in .container-login p:hover {
-  border-top-left-radius: 0;
   transition: 0.1s;
   transform: translate(-2px, -1px);
-}
-
-.nav-container .log-in .container-login :nth-child(1),
-.nav-container .log-in .container-login :nth-child(2) {
-  font-size: 1.2em;
-  border-top-left-radius: 0.5em;
-  cursor: pointer;
-  padding: 0.5em 1em;
-  border: 1px solid blue;
-}
-
-.nav-container .log-in .container-login :nth-child(3) {
-  font-size: 1.2em;
-  color: white;
-  cursor: pointer;
-  padding: 0.5em 1em;
+  background-color: #ffebeb;
   border-radius: 0.5em;
-  background-color: blue;
+}
+
+.nav-container .log-in .container-login :nth-child(3):hover {
+  background-color: #006cf9;
 }
 
 /* CONTAINER JUMBOTRON */
@@ -161,17 +148,17 @@ body {
 .left {
   grid-area: left;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .left img {
   padding: 2px;
   border: 1px solid rgb(0, 0, 0);
-  width: 50em;
+  width: 40em;
 }
 
 .left:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 
 /* KANAN ATAS */
@@ -190,7 +177,7 @@ body {
 
 .kanan-tengah {
   grid-area: kanantengah;
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,16 +188,16 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 90%;
   gap: 3em;
 }
 
 .kanan-tengah .container .kotak {
-  padding: 1em;
+  width: 200px;
+  height: 200px;
+  padding: 1em 0;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 7px 7px 0 black;
   cursor: pointer;
-  width: 150px;
   transition: 0.2s;
 }
 
@@ -220,9 +207,9 @@ body {
 }
 
 .kanan-tengah .container .kotak img {
-  margin-bottom: 5px;
+  display: block;
+  margin: 0.5em 23px;
   width: 150px;
-  height: 100px;
 }
 
 .kanan-tengah .container .kotak a {
@@ -245,11 +232,12 @@ body {
 }
 
 .fade {
-  animation: fade 1s;
+  animation: fade;
 }
 
 /* CONTAINER MARKETPLACE */
 
+/* BARIS PERTAMA SLIDER */
 .container-market {
   width: 100%;
 }
@@ -262,6 +250,7 @@ body {
 }
 
 .container-market .image-slider {
+  background-color: red;
   margin: auto;
   max-width: 40em;
   min-height: 20em;
@@ -329,6 +318,21 @@ body {
   animation: imgFade 0.5s ease-in-out;
 }
 
+/* BARIS KEDUA */
+
+.container-market .container-fluid .ps .p {
+  font-size: 5em;
+  text-transform: capitalize;
+}
+
+.container-market .container-fluid .images-1 :nth-child(1) .image {
+  width: 50em;
+  height: 50em;
+  background-image: url(foto/strobery.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* FOOTER */
 
 footer {
@@ -345,9 +349,6 @@ footer .container {
 
 /* IMAGE GALERY JUMBOTRON */
 @keyframes fade {
-  from {
-    transform: scale(0);
-  }
   to {
     transform: scale(1);
   }

@@ -7,14 +7,14 @@ logo.innerHTML = animasiLogoNavbar;
 
 // ANIMASI TAG "P" PADA NAVBAR
 let drop = document.querySelector(".kontak .box");
-let i = document.querySelector(".kontak p");
-i.addEventListener("click", function () {
+let p = document.querySelector(".kontak p");
+p.addEventListener("click", function () {
   drop.classList.toggle("toggle");
 });
 
 // ANIMASI JUMBOTRON KANAN
 // IMAGE GALERY
-let leftFoto = document.getElementsByClassName("leftt")[0];
+let leftFoto = document.getElementsByClassName("img")[0];
 let switchFoto = document.querySelector(".kanan-tengah .container");
 switchFoto.addEventListener("click", function (event) {
   if (event.target.className == "image") {
@@ -22,7 +22,7 @@ switchFoto.addEventListener("click", function (event) {
     leftFoto.classList.add("fade");
     setTimeout(function () {
       leftFoto.classList.remove("fade");
-    }, 500);
+    }, 100);
   }
 });
 
