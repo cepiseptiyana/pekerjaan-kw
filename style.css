@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-body {
+fadebody {
   font-size: 12px;
 }
 
@@ -145,20 +145,16 @@ body {
   gap: 5px;
 }
 
-.left {
+.human {
   grid-area: left;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.left img {
   padding: 2px;
   border: 1px solid rgb(0, 0, 0);
   width: 40em;
 }
 
-.left:hover {
-  transform: scale(1.02);
+.switch {
+  animation: fadeIn 0.5s;
 }
 
 /* KANAN ATAS */
@@ -229,10 +225,6 @@ body {
 
 .kanan-tengah .container .kotak a:hover {
   background-color: #006cf9;
-}
-
-.fade {
-  animation: fade;
 }
 
 /* CONTAINER MARKETPLACE */
@@ -314,8 +306,8 @@ body {
   left: 100%;
 }
 
-.image-fade {
-  animation: imgFade 0.5s ease-in-out;
+.container-market .image-slider .img {
+  animation: text 1s;
 }
 
 /* BARIS KEDUA */
@@ -333,6 +325,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* FOOTER */
 
 footer {
@@ -348,18 +341,11 @@ footer .container {
 /* animation */
 
 /* IMAGE GALERY JUMBOTRON */
-@keyframes fade {
-  to {
-    transform: scale(1);
-  }
-}
-
-/* IMAGE GALERY MARKETPLACE */
-@keyframes imgFade {
+@keyframes fadeIn {
   from {
-    opacity: 0;
+    transform: scale(0);
   }
   to {
-    opacity: 1;
+    transform: scaleY(1);
   }
 }

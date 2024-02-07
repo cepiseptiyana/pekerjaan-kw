@@ -14,16 +14,18 @@ p.addEventListener("click", function () {
 
 // ANIMASI JUMBOTRON KANAN
 // IMAGE GALERY
-let leftFoto = document.getElementsByClassName("img")[0];
-let switchFoto = document.querySelector(".kanan-tengah .container");
-switchFoto.addEventListener("click", function (event) {
-  if (event.target.className == "image") {
-    leftFoto.src = event.target.src;
-    leftFoto.classList.add("fade");
-    setTimeout(function () {
-      leftFoto.classList.remove("fade");
-    }, 100);
-  }
+
+let containerFotoJumbotron = document.querySelector(".container-jumbotron");
+let jumbotronImages = document.querySelector(".container-jumbotron .human");
+
+containerFotoJumbotron.addEventListener("click", function (event) {
+  event.target.className === "image"
+    ? (jumbotronImages.src = event.target.src)
+    : console.log("false");
+  jumbotronImages.classList.add("switch");
+  setTimeout(function () {
+    jumbotronImages.classList.remove("switch");
+  }, 500);
 });
 
 // SLIDER
@@ -49,11 +51,11 @@ function slide(id) {
   // set the background image
   slider.style.backgroundImage = `url(foto/${images[id]})`;
   // add image fade animation
-  slider.classList.add("image-fade");
+  slider.classList.add("img");
   // remove animation setelah di gunakan
   setTimeout(() => {
-    slider.classList.remove("image-fade");
-  }, 550);
+    slider.classList.remove("img");
+  }, 1000);
   // change HEADING
   heading.innerHTML = headings[id];
   // CHANGE DESCRIPTION
