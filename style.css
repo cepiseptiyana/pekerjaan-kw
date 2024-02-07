@@ -153,7 +153,7 @@ fadebody {
   width: 40em;
 }
 
-.switch {
+.human.switch {
   animation: fadeIn 0.5s;
 }
 
@@ -306,8 +306,8 @@ fadebody {
   left: 100%;
 }
 
-.container-market .image-slider .img {
-  animation: text 1s;
+.container-market .image-slider.img {
+  animation: marketPlace 0.5s;
 }
 
 /* BARIS KEDUA */
@@ -347,5 +347,14 @@ footer .container {
   }
   to {
     transform: scaleY(1);
+  }
+}
+
+@keyframes marketPlace {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
   }
 }

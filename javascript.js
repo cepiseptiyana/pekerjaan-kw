@@ -1,3 +1,4 @@
+// NAVBAR
 // ANIMASI PADA "LOGO" NAVBAR
 let logo = document.querySelector(".logo");
 let animasiLogoNavbar = [...logo.textContent]
@@ -5,31 +6,39 @@ let animasiLogoNavbar = [...logo.textContent]
   .join("");
 logo.innerHTML = animasiLogoNavbar;
 
-// ANIMASI TAG "P" PADA NAVBAR
-let drop = document.querySelector(".kontak .box");
-let p = document.querySelector(".kontak p");
-p.addEventListener("click", function () {
-  drop.classList.toggle("toggle");
+// STYLE
+// PARAGRAPH KONTAK
+let containerBox = document.querySelector(
+  ".nav-container .menu .menu-cover .kontak .box "
+);
+window.addEventListener("click", function (event) {
+  console.log(event.target);
+  if (event.target.className === "click-p")
+    return (containerBox.style.display = "block");
+  return (containerBox.style.display = "none");
 });
 
-// ANIMASI JUMBOTRON KANAN
+// JUMBOTRON
+// ANIMASI
 // IMAGE GALERY
 
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
 
 containerFotoJumbotron.addEventListener("click", function (event) {
-  event.target.className === "image"
-    ? (jumbotronImages.src = event.target.src)
-    : console.log("false");
-  jumbotronImages.classList.add("switch");
-  setTimeout(function () {
-    jumbotronImages.classList.remove("switch");
-  }, 500);
+  if (event.target.className === "image") {
+    jumbotronImages.src = event.target.src;
+    jumbotronImages.classList.add("switch");
+    setTimeout(function () {
+      jumbotronImages.classList.remove("switch");
+    }, 500);
+  }
 });
 
+// MARKETPLACE
+// ANIMASI
 // SLIDER
-// IMAGE GALERY
+
 let slider = document.querySelector(".image-slider");
 let arrLeft = document.querySelector(".arrow-left");
 let arrRight = document.querySelector(".arrow-right");
@@ -55,7 +64,7 @@ function slide(id) {
   // remove animation setelah di gunakan
   setTimeout(() => {
     slider.classList.remove("img");
-  }, 1000);
+  }, 500);
   // change HEADING
   heading.innerHTML = headings[id];
   // CHANGE DESCRIPTION
