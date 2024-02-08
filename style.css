@@ -242,11 +242,11 @@ fadebody {
 }
 
 .container-market .image-slider {
+  position: relative;
   background-color: red;
   margin: auto;
-  max-width: 40em;
-  min-height: 20em;
-  position: relative;
+  max-width: 30em;
+  min-height: 30em;
   background-image: url(foto/1.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -317,13 +317,18 @@ fadebody {
   text-transform: capitalize;
 }
 
-.container-market .container-fluid .images-1 :nth-child(1) .image {
-  width: 50em;
-  height: 50em;
+.container-market .container-fluid .images-1 :nth-child(1) .image,
+.container-market .container-fluid .images-1 :nth-child(2) .image2 {
+  width: 10em;
+  height: 10em;
   background-image: url(foto/strobery.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container-market .container-fluid .images-1 :nth-child(2) .image2 {
+  background-image: url(foto/CAMERA.jpg);
 }
 
 /* FOOTER */

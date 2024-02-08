@@ -12,7 +12,6 @@ let containerBox = document.querySelector(
   ".nav-container .menu .menu-cover .kontak .box "
 );
 window.addEventListener("click", function (event) {
-  console.log(event.target);
   if (event.target.className === "click-p")
     return (containerBox.style.display = "block");
   return (containerBox.style.display = "none");
@@ -72,21 +71,23 @@ function slide(id) {
 }
 
 // add click even to left arrow
+// PENGKONDISIAN
 let id = 0;
 arrLeft.addEventListener("click", function () {
   // decrement image id
-  id--;
+  id -= 1;
   // check if id is smaller than the number of available slides
-  id < 0 ? (id = images.length - 1) : "false";
+  id < 0 ? (id = images.length - 1) : console.log("false");
   // run the slide function
   slide(id);
+  // console.log(id);
 });
 // add click even to left arrow
 arrRight.addEventListener("click", function () {
   // increment image id
   id++;
   // check if id is greater than the number of available slides
-  id > images.length - 1 ? (id = 0) : "false";
+  id > images.length - 1 ? (id = 0) : console.log("false");
   // run the slide function
   slide(id);
 });
