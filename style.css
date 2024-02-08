@@ -317,18 +317,20 @@ fadebody {
   text-transform: capitalize;
 }
 
-.container-market .container-fluid .images-1 :nth-child(1) .image,
-.container-market .container-fluid .images-1 :nth-child(2) .image2 {
-  width: 10em;
-  height: 10em;
-  background-image: url(foto/strobery.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+.container-market .container-fluid .container-sport .sport {
+  width: 30em;
+  height: 20em;
+  background-image: url(foto/sport2.jpg);
+  background-position: center 20%;
   background-size: cover;
 }
 
-.container-market .container-fluid .images-1 :nth-child(2) .image2 {
+.container-market .container-fluid .container-camera .camera {
+  width: 30em;
+  height: 20em;
   background-image: url(foto/CAMERA.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 /* FOOTER */
