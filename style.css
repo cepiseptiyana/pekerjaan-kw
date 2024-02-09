@@ -123,6 +123,7 @@ fadebody {
 
 /* CONTAINER JUMBOTRON */
 
+/* KIRI  */
 .jumbotron {
   margin-top: 95px;
   min-height: 100vh;
@@ -131,26 +132,20 @@ fadebody {
 
 .container-mid {
   padding: 30px;
+  display: flex;
+  justify-content: center;
 }
 
-.container-jumbotron {
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas:
-    "left right"
-    "left kanantengah"
-    "left kananbawah";
-  justify-items: center;
-  align-items: center;
-  gap: 5px;
+.container-jumbotron .list {
+  display: flex;
+  justify-content: center;
 }
 
-.human {
-  grid-area: left;
+.container-jumbotron .human {
   cursor: pointer;
-  padding: 2px;
+  padding: 0.5em;
   border: 1px solid rgb(0, 0, 0);
-  width: 40em;
+  width: 20em;
 }
 
 .human.switch {
@@ -164,16 +159,9 @@ fadebody {
   font-family: sans-serif;
 }
 
-.container-jumbotron .kanan-atas :nth-child(1) {
-  display: flex;
-  justify-content: center;
-}
-
 /* KANAN TENGAH */
 
 .kanan-tengah {
-  grid-area: kanantengah;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -184,13 +172,11 @@ fadebody {
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap: 3em;
+  gap: 1em;
 }
 
 .kanan-tengah .container .kotak {
-  width: 200px;
-  height: 200px;
-  padding: 1em 0;
+  width: 10em;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 7px 7px 0 black;
   cursor: pointer;
@@ -204,8 +190,8 @@ fadebody {
 
 .kanan-tengah .container .kotak img {
   display: block;
-  margin: 0.5em 23px;
-  width: 150px;
+  width: 5em;
+  height: 5em;
 }
 
 .kanan-tengah .container .kotak a {
@@ -317,18 +303,30 @@ fadebody {
   text-transform: capitalize;
 }
 
-.container-market .container-fluid .container-sport .sport {
-  width: 30em;
-  height: 20em;
+.container-market .container-fluid .images-1 {
+  width: 80em;
+}
+
+.container-market .container-fluid .container-sport .card-body .sport {
+  width: 22em;
+  height: 15em;
   background-image: url(foto/sport2.jpg);
-  background-position: center 20%;
+  background-position: center 30%;
   background-size: cover;
 }
 
-.container-market .container-fluid .container-camera .camera {
-  width: 30em;
-  height: 20em;
+.container-market .container-fluid .container-camera .card-body .camera {
+  width: 22em;
+  height: 15em;
   background-image: url(foto/CAMERA.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.container-market .container-fluid .container-strobery .card-body .strobery {
+  width: 22em;
+  height: 15em;
+  background-image: url(foto/strobery.jpg);
   background-position: center;
   background-size: cover;
 }

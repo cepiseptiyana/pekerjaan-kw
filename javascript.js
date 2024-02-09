@@ -24,14 +24,19 @@ window.addEventListener("click", function (event) {
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
 
+// PENGKONDISIAN
+
+const arrayFoto = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
+function ubahFoto(nilai) {
+  jumbotronImages.style.backgroundImage = `url(foto/${images[nilai]})`;
+}
+const jumlahFoto = 0;
 containerFotoJumbotron.addEventListener("click", function (event) {
-  if (event.target.className === "image") {
-    jumbotronImages.src = event.target.src;
-    jumbotronImages.classList.add("switch");
-    setTimeout(function () {
-      jumbotronImages.classList.remove("switch");
-    }, 500);
+  jumlahFoto++;
+  if (event.target.className === "image" && jumlahFoto > arrayFoto.length - 1) {
+    jumlahFoto = 0;
   }
+  ubahFoto(jumlahFoto);
 });
 
 // MARKETPLACE
@@ -45,7 +50,7 @@ let heading = document.querySelector(".caption h1");
 let description = document.querySelector(".caption p");
 
 // DATA FOR SLIDER
-const images = ["1.png", "CAMERA.jpg", "wee.jpg"];
+const images = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
 const headings = ["New York, USA", "Tokyo, Japan", "Dubai, UAE"];
 const descriptions = [
   "the city that never sleeps",
@@ -91,3 +96,11 @@ arrRight.addEventListener("click", function () {
   // run the slide function
   slide(id);
 });
+
+// jumbotronImages.appendChild(event.target);
+//     console.log(event.target);
+//     jumbotronImages.src = event.target.src;
+//     jumbotronImages.classList.add("switch");
+//     setTimeout(function () {
+//       jumbotronImages.classList.remove("switch");
+//     }, 500);

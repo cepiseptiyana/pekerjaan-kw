@@ -62,26 +62,45 @@
 
     <!-- JUMBOTRON -->
     <section class="jumbotron">
-      <section class="container-mid">
-        <div class="container-jumbotron">
-          <img src="foto/1.png" alt="" class="human" />
-          <div class="kanan-atas">
-            <p class="text-info">Start Here to choice</p>
-            <p>Select the image according to your wishes:</p>
-          </div>
-          <div class="kanan-tengah">
-            <div class="container">
-              <div class="kotak">
-                <img src="foto/CAMERA.jpg" alt="" class="image" />
-                <a href="">buy</a>
-              </div>
-              <div class="kotak">
-                <img src="foto/wee.jpg" alt="" class="image" />
-                <a href="">buy</a>
-              </div>
-              <div class="kotak">
-                <img src="foto/1.png" alt="" class="image" />
-                <a href="">buy</a>
+      <!-- UBAH JADI GRID -->
+      <section class="container-fluid container-mid">
+        <!-- UBAH JADI ROW-->
+        <div class="container-fluid row container-jumbotron">
+          <!-- UBAH JADI COLOM -->
+          <div class="col list">
+            <!-- FOTO KIRI-->
+            <!-- berubah ketika sudah di klik -->
+            <div class="human"></div>
+            <!-- <img src="foto/strobery.jpg" alt="" class="human" /> -->
+            <!-- KANAN ATAS -->
+            <div class="kanan-atas">
+              <p class="text-info text-center">Start Here to choice</p>
+              <p class="text-center">
+                Select the image according to your wishes:
+              </p>
+              <!-- KANAN TENGAH -->
+              <div class="kanan-tengah">
+                <div class="container">
+                  <div class="card kotak">
+                    <div class="card-body">
+                      <!-- apenchild gambar di klik -->
+                      <div class="image">Click image</div>
+                    </div>
+                    <a href="">buy</a>
+                  </div>
+                  <div class="card kotak">
+                    <div class="card-body">
+                      <div class="image"></div>
+                    </div>
+                    <a href="">buy</a>
+                  </div>
+                  <div class="card kotak">
+                    <div class="card-body">
+                      <div class="image"></div>
+                    </div>
+                    <a href="">buy</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -104,16 +123,16 @@
             <p>the city that never sleep</p>
           </div>
         </div>
-        <div class="container-fluid text-center bg-warning">
-          <div class="container row m-auto ps">
+        <div class="container-fluid">
+          <div class="row container m-auto ps">
             <div class="col p">U greet The Opinion have between</div>
           </div>
-          <div class="container row bg-info m-auto images-1">
+          <div class="row m-auto images-1">
             <div class="col">
-              <div class="card container-sport">
-                <div class="sport"></div>
+              <div class="card container-sport bg-warning">
                 <div class="card-body">
-                  <p>
+                  <div class="sport m-auto"></div>
+                  <p class="text-capitalize fs-5">
                     Exercise not only keeps us healthy, but also clears the
                     mind, strengthens the heart, and reduces stress in the body.
                   </p>
@@ -121,18 +140,27 @@
               </div>
             </div>
             <div class="col">
-              <div class="card container-camera">
-                <div class="camera"></div>
+              <div class="card container-camera bg-warning">
                 <div class="card-body">
-                  <p>
+                  <div class="camera m-auto"></div>
+                  <p class="text-capitalize fs-5">
                     Exercise not only keeps us healthy, but also clears the
                     mind, strengthens the heart, and reduces stress in the body.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col">
+              <div class="card container-strobery bg-warning">
+                <div class="card-body">
+                  <div class="strobery m-auto"></div>
+                  <p class="text-capitalize fs-5">
+                    Exercise not only keeps us healthy, but also clears the
+                    mind, strengthens the heart, and reduces stress in the body.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
