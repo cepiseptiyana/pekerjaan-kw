@@ -195,21 +195,21 @@ fadebody {
   box-shadow: 9px 9px 0 black;
 }
 
-.kanan-tengah .container .kotak-1 .image {
+.kanan-tengah .container .kotak-1 .image-1 {
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/strobery.jpg);
   background-position: center 20%;
   background-size: cover;
 }
-.kanan-tengah .container .kotak-2 .image {
+.kanan-tengah .container .kotak-2 .image-2 {
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/CAMERA.jpg);
   background-position: center 20%;
   background-size: cover;
 }
-.kanan-tengah .container .kotak-3 .image {
+.kanan-tengah .container .kotak-3 .image-3 {
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/wee.jpg);

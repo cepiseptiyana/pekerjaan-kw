@@ -25,22 +25,18 @@ window.addEventListener("click", function (event) {
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
 const arrayFoto = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
-// GUNAKAN LET UNTUK MENGUBAH ISI VARIABLE
-let jumlahFoto = 0;
+let [a, b, c] = arrayFoto;
 function ubahFoto(nilai) {
-  jumbotronImages.style.backgroundImage = `url(foto/${arrayFoto[nilai]})`;
+  jumbotronImages.style.backgroundImage = `url(foto/${nilai})`;
   jumbotronImages.classList.add("switch");
   setTimeout(function () {
     jumbotronImages.classList.remove("switch");
   });
 }
 containerFotoJumbotron.addEventListener("click", function (event) {
-  event.target.jumlahFoto++;
-  console.log(jumlahFoto);
-  if (event.target.className === "image" && jumlahFoto > arrayFoto.length - 1) {
-    jumlahFoto = 0;
-  }
-  ubahFoto(jumlahFoto);
+  if (event.target.className === "image-1 mb-2") return ubahFoto(a);
+  if (event.target.className === "image-2 mb-2") return ubahFoto(b);
+  if (event.target.className === "image-3 mb-2") return ubahFoto(c);
 });
 
 // MARKETPLACE
