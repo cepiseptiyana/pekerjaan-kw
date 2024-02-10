@@ -132,20 +132,27 @@ fadebody {
 
 .container-mid {
   padding: 30px;
-  display: flex;
-  justify-content: center;
 }
 
 .container-jumbotron .list {
   display: flex;
   justify-content: center;
+  gap: 10em;
 }
 
 .container-jumbotron .human {
-  cursor: pointer;
-  padding: 0.5em;
-  border: 1px solid rgb(0, 0, 0);
+  background-image: url(foto/strobery.jpg);
+  background-position: center;
+  background-size: cover;
+  box-shadow: 7px 7px 0 black;
   width: 20em;
+  height: 20em;
+  padding: 0.5em;
+  transition: 0.3s;
+}
+
+.container-jumbotron .human:hover {
+  transform: scale(1.1);
 }
 
 .human.switch {
@@ -188,10 +195,26 @@ fadebody {
   box-shadow: 9px 9px 0 black;
 }
 
-.kanan-tengah .container .kotak img {
-  display: block;
-  width: 5em;
-  height: 5em;
+.kanan-tengah .container .kotak-1 .image {
+  width: 8.5em;
+  height: 8.5em;
+  background-image: url(foto/strobery.jpg);
+  background-position: center 20%;
+  background-size: cover;
+}
+.kanan-tengah .container .kotak-2 .image {
+  width: 8.5em;
+  height: 8.5em;
+  background-image: url(foto/CAMERA.jpg);
+  background-position: center 20%;
+  background-size: cover;
+}
+.kanan-tengah .container .kotak-3 .image {
+  width: 8.5em;
+  height: 8.5em;
+  background-image: url(foto/wee.jpg);
+  background-position: center 20%;
+  background-size: cover;
 }
 
 .kanan-tengah .container .kotak a {

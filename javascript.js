@@ -21,18 +21,22 @@ window.addEventListener("click", function (event) {
 // ANIMASI
 // IMAGE GALERY
 
+// PENGKONDISIAN
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
-
-// PENGKONDISIAN
-
 const arrayFoto = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
+// GUNAKAN LET UNTUK MENGUBAH ISI VARIABLE
+let jumlahFoto = 0;
 function ubahFoto(nilai) {
-  jumbotronImages.style.backgroundImage = `url(foto/${images[nilai]})`;
+  jumbotronImages.style.backgroundImage = `url(foto/${arrayFoto[nilai]})`;
+  jumbotronImages.classList.add("switch");
+  setTimeout(function () {
+    jumbotronImages.classList.remove("switch");
+  });
 }
-const jumlahFoto = 0;
 containerFotoJumbotron.addEventListener("click", function (event) {
-  jumlahFoto++;
+  event.target.jumlahFoto++;
+  console.log(jumlahFoto);
   if (event.target.className === "image" && jumlahFoto > arrayFoto.length - 1) {
     jumlahFoto = 0;
   }
