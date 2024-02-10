@@ -196,6 +196,7 @@ fadebody {
 }
 
 .kanan-tengah .container .kotak-1 .image-1 {
+  cursor: pointer;
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/strobery.jpg);
@@ -203,6 +204,7 @@ fadebody {
   background-size: cover;
 }
 .kanan-tengah .container .kotak-2 .image-2 {
+  cursor: pointer;
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/CAMERA.jpg);
@@ -210,6 +212,7 @@ fadebody {
   background-size: cover;
 }
 .kanan-tengah .container .kotak-3 .image-3 {
+  cursor: pointer;
   width: 8.5em;
   height: 8.5em;
   background-image: url(foto/wee.jpg);
