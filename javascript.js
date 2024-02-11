@@ -77,24 +77,24 @@ function slide(id) {
 
 // add click even to left arrow
 // PENGKONDISIAN
-let id = 0;
+let nilaiAwal = 0;
 arrLeft.addEventListener("click", function () {
   // decrement image id
-  id -= 1;
+  nilaiAwal -= 1;
   // check if id is smaller than the number of available slides
-  id < 0 ? (id = images.length - 1) : console.log("false");
+  nilaiAwal < 0 ? (id = images.length - 1) : console.log("false");
   // run the slide function
-  slide(id);
+  slide(nilaiAwal);
   // console.log(id);
 });
 // add click even to left arrow
 arrRight.addEventListener("click", function () {
   // increment image id
-  id++;
+  nilaiAwal++;
   // check if id is greater than the number of available slides
-  id > images.length - 1 ? (id = 0) : console.log("false");
+  nilaiAwal > images.length - 1 ? (id = 0) : console.log("false");
   // run the slide function
-  slide(id);
+  slide(nilaiAwal);
 });
 
 // jumbotronImages.appendChild(event.target);
