@@ -359,14 +359,14 @@ fadebody {
 
 /* FOOTER */
 
-footer {
-  padding: 100px;
-  background-color: rgb(0, 255, 30);
-}
-
-footer .container {
-  background-color: blue;
-  display: flex;
+footer .baris-1 {
+  width: 50%;
+  margin: auto;
+  font-size: 1.5em;
+  font-family: courier;
+  font-weight: 550;
+  text-transform: capitalize;
+  border-radius: 1em;
 }
 
 /* animation */
