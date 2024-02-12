@@ -127,11 +127,11 @@ body {
 }
 
 .container-contact {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(0, 108, 249, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
   right: 0;
@@ -140,9 +140,42 @@ body {
 }
 
 .container-contact .contact {
+  position: relative;
+  border-radius: 1em;
   width: 50%;
-  min-height: 100vh;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-contact .contact p {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  color: rgb(27, 177, 27);
+}
+
+.container-contact .contact .whatsapp {
+  cursor: pointer;
+  border-radius: 1em;
+  margin: 1em auto;
+  width: 50%;
+  height: 20em;
+  background-image: url(foto/wa.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container-contact .contact .close {
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  background-color: #1d78f0;
+  border-radius: 50%;
 }
 
 /* CONTAINER JUMBOTRON */
