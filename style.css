@@ -121,6 +121,11 @@ fadebody {
   background-color: #006cf9;
 }
 
+.nav-container .log-in .container-login .container-contact {
+  position: absolute;
+  top: 100%;
+}
+
 /* CONTAINER JUMBOTRON */
 
 /* KIRI  */
