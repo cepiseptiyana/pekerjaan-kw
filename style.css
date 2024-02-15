@@ -4,7 +4,6 @@
 }
 
 body {
-  background-color: red;
   font-size: 12px;
   position: relative;
 }
@@ -24,8 +23,8 @@ body {
 }
 
 .logo {
+  color: brown;
   align-items: center;
-  color: rgb(0, 0, 0);
   display: flex;
   font-size: 2em;
   font-family: sans-serif;
@@ -59,21 +58,22 @@ body {
 
 .menu .menu-cover p {
   margin: 0;
-  color: rgb(0, 0, 0);
+  color: black;
   padding: 0.5em;
 }
 
 .menu .menu-cover p:hover {
+  color: white;
   cursor: pointer;
   border-top-left-radius: 0;
-  transition: 0.2s;
+  transition: 0.1s;
   transform: translate(-2px, -1px);
-  background-color: #ffebeb;
-  border-radius: 0.5em;
+  background-color: chocolate;
+  border-radius: 1em;
 }
 
 .menu .menu-cover .kontak p:hover {
-  background-color: #006cf9;
+  background-color: chocolate;
   color: white;
 }
 
@@ -82,9 +82,6 @@ body {
   position: absolute;
   background-color: rgb(120, 120, 167);
   left: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
 }
 
 .menu .menu-cover .box.toggle {
@@ -99,7 +96,7 @@ body {
 }
 
 .nav-container .log-in .container-login {
-  color: rgb(0, 0, 0);
+  color: black;
   font-family: sans-serif;
   display: flex;
   width: 500px;
@@ -116,27 +113,35 @@ body {
 }
 
 .nav-container .log-in .container-login p:hover {
+  color: white;
   transition: 0.1s;
   transform: translate(-2px, -1px);
-  background-color: #ffebeb;
+  background-color: chocolate;
   border-radius: 0.5em;
 }
 
 .nav-container .log-in .container-login :nth-child(3):hover {
-  background-color: #006cf9;
+  background-color: chocolate;
 }
 
+/* KONTAK WHATSAPP */
+
 .container-contact {
+  display: none;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 99999;
+}
+
+.container-contact .contact-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .container-contact .contact {
@@ -166,6 +171,7 @@ body {
 }
 
 .container-contact .contact .close {
+  background-color: rgba(36, 141, 62, 0.493);
   position: absolute;
   left: 100%;
   bottom: 100%;
@@ -174,9 +180,15 @@ body {
   cursor: pointer;
   width: 2em;
   height: 2em;
-  background-color: #1d78f0;
-  border-radius: 50%;
+  transition: 0.2s;
 }
+
+.container-contact .contact .close:hover {
+  background-color: rgba(36, 141, 62, 0.3);
+  border-top-left-radius: 1em;
+}
+
+/* END KONTAK WHATSAPP */
 
 /* CONTAINER JUMBOTRON */
 
@@ -220,8 +232,14 @@ body {
 /* KANAN ATAS */
 
 .container-jumbotron .kanan-atas p {
+  color: white;
+  background: linear-gradient(to right, chocolate, rgb(255, 236, 236));
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
   font-size: 2em;
   font-family: sans-serif;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 /* KANAN TENGAH */
@@ -290,11 +308,10 @@ body {
   font-family: sans-serif;
   text-transform: uppercase;
   margin: auto;
-  background-color: #1d78f0;
 }
 
 .kanan-tengah .container .kotak a:hover {
-  background-color: #006cf9;
+  background-color: brown;
 }
 
 /* CONTAINER MARKETPLACE */
@@ -305,6 +322,8 @@ body {
 }
 
 .container-market p {
+  text-transform: capitalize;
+  color: chocolate;
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
@@ -340,7 +359,7 @@ body {
 
 .container-market .image-slider .caption h1 {
   margin: 0;
-  color: #fff;
+  color: chocolate;
 }
 
 .container-market .image-slider .caption p {
@@ -421,6 +440,10 @@ body {
   position: relative;
   z-index: 0;
 } */
+
+footer {
+  color: white;
+}
 
 footer .baris-1 {
   width: 50%;

@@ -17,6 +17,19 @@ window.addEventListener("click", function (event) {
   return (containerBox.style.display = "none");
 });
 
+// CONTACT US KANAN
+
+let contact = document.querySelector(".container-login :nth-child(1)");
+let containerContact = document.querySelector(".container-contact");
+contact.addEventListener("click", function () {
+  containerContact.style.display = "block";
+});
+containerContact.addEventListener("click", function (event) {
+  if (event.target.className === "close")
+    return (containerContact.style.display = "none");
+  return (containerContact.style.display = "block");
+});
+
 // JUMBOTRON
 // ANIMASI
 // IMAGE GALERY
@@ -92,15 +105,7 @@ arrRight.addEventListener("click", function () {
   // increment image id
   nilaiAwal++;
   // check if id is greater than the number of available slides
-  nilaiAwal > images.length - 1 ? (id = 0) : console.log("false");
+  nilaiAwal > images.length - 1 ? (nilaiAwal = 0) : console.log("false");
   // run the slide function
   slide(nilaiAwal);
 });
-
-// jumbotronImages.appendChild(event.target);
-//     console.log(event.target);
-//     jumbotronImages.src = event.target.src;
-//     jumbotronImages.classList.add("switch");
-//     setTimeout(function () {
-//       jumbotronImages.classList.remove("switch");
-//     }, 500);
