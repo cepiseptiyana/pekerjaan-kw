@@ -8,17 +8,26 @@ logo.innerHTML = animasiLogoNavbar;
 
 // STYLE
 // PARAGRAPH KONTAK
-let containerBox = document.querySelector(
-  ".nav-container .menu .menu-cover .kontak .box "
-);
+let containerBox = document.querySelector(".nav-container .box.toggle ");
 window.addEventListener("click", function (event) {
   if (event.target.className === "click-p")
     return (containerBox.style.display = "block");
   return (containerBox.style.display = "none");
 });
 
-// CONTACT US KANAN
+// SEARCH
+let searchButton = document.querySelector(".nav-container .container-search");
+let paragparp = document.querySelector(".paragraph3");
+window.addEventListener("click", function (event) {
+  if (
+    event.target.className === "paragraph3" ||
+    event.target.className === "search"
+  )
+    return (searchButton.style.top = "100%");
+  return (searchButton.style.top = "-100px");
+});
 
+// CONTACT US KANAN
 let contact = document.querySelector(".container-login :nth-child(1)");
 let containerContact = document.querySelector(".container-contact");
 contact.addEventListener("click", function () {
@@ -33,7 +42,6 @@ containerContact.addEventListener("click", function (event) {
 // JUMBOTRON
 // ANIMASI
 // IMAGE GALERY
-
 // PENGKONDISIAN
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
@@ -55,7 +63,6 @@ containerFotoJumbotron.addEventListener("click", function (event) {
 // MARKETPLACE
 // ANIMASI
 // SLIDER
-
 let slider = document.querySelector(".image-slider");
 let arrLeft = document.querySelector(".arrow-left");
 let arrRight = document.querySelector(".arrow-right");

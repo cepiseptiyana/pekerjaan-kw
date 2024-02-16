@@ -77,14 +77,14 @@ body {
   color: white;
 }
 
-.menu .menu-cover .box .kolom {
+.nav-container .box.toggle {
   display: flex;
   position: absolute;
+  top: 100%;
   background-color: rgb(120, 120, 167);
-  left: 0;
 }
 
-.menu .menu-cover .box.toggle {
+.nav-container .box.toggle {
   display: none;
 }
 
@@ -124,8 +124,37 @@ body {
   background-color: chocolate;
 }
 
-/* KONTAK WHATSAPP */
+/* MENU SEARCH */
+.container-search {
+  width: 40em;
+  height: 2em;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: -100px;
+  right: 50px;
+  gap: 5px;
+  transition: 0.3s;
+}
 
+.container-search .search {
+  width: 80%;
+  border-radius: 0.5em;
+  text-align: center;
+  text-transform: capitalize;
+  color: chocolate;
+}
+
+.container-search button {
+  text-transform: capitalize;
+  padding: 0 1em;
+  border-radius: 1em;
+  border-top: 1px solid rgb(251, 226, 0);
+  border-bottom: 1px solid rgb(55, 255, 0);
+}
+/* END MENU SEARCH */
+
+/* KONTAK WHATSAPP */
 .container-contact {
   display: none;
   position: fixed;
@@ -187,11 +216,9 @@ body {
   background-color: rgba(36, 141, 62, 0.3);
   border-top-left-radius: 1em;
 }
-
 /* END KONTAK WHATSAPP */
 
 /* CONTAINER JUMBOTRON */
-
 /* KIRI  */
 .jumbotron {
   padding-top: 100px;
@@ -233,7 +260,7 @@ body {
 
 .container-jumbotron .kanan-atas p {
   color: white;
-  background: linear-gradient(to right, chocolate, rgb(255, 236, 236));
+  background: linear-gradient(to right, chocolate, rgb(0, 0, 0));
   border-top-left-radius: 1em;
   border-bottom-right-radius: 1em;
   font-size: 2em;
