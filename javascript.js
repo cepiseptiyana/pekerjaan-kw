@@ -39,6 +39,11 @@ containerContact.addEventListener("click", function (event) {
   return (containerContact.style.display = "block");
 });
 
+// CONTACT WHATSAPP
+let noWa = document.querySelector(
+  ".container-contact .contact-1 .contact .whatsapp"
+);
+
 // JUMBOTRON
 // ANIMASI
 // IMAGE GALERY

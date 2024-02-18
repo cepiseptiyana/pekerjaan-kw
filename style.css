@@ -33,7 +33,7 @@ body {
 }
 
 .logo span {
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .logo span:hover {
@@ -138,6 +138,7 @@ body {
 }
 
 .container-search .search {
+  border: 1px solid white;
   width: 80%;
   border-radius: 0.5em;
   text-align: center;
@@ -146,11 +147,16 @@ body {
 }
 
 .container-search button {
+  font-size: 1.3em;
   text-transform: capitalize;
-  padding: 0 1em;
+  padding: 0 1.3em;
   border-radius: 1em;
-  border-top: 1px solid rgb(251, 226, 0);
-  border-bottom: 1px solid rgb(55, 255, 0);
+  border: 1px solid dodgerblue;
+}
+
+.container-search button:hover {
+  color: white;
+  background-color: dodgerblue;
 }
 /* END MENU SEARCH */
 
@@ -187,7 +193,7 @@ body {
   color: rgb(27, 177, 27);
 }
 
-.container-contact .contact .whatsapp {
+.container-contact .contact a .whatsapp {
   cursor: pointer;
   border-radius: 1em;
   margin: 1em auto;
@@ -259,10 +265,7 @@ body {
 /* KANAN ATAS */
 
 .container-jumbotron .kanan-atas p {
-  color: white;
-  background: linear-gradient(to right, chocolate, rgb(0, 0, 0));
-  border-top-left-radius: 1em;
-  border-bottom-right-radius: 1em;
+  color: dodgerblue;
   font-size: 2em;
   font-family: sans-serif;
   text-transform: capitalize;
@@ -350,7 +353,7 @@ body {
 
 .container-market p {
   text-transform: capitalize;
-  color: chocolate;
+  color: dodgerblue;
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
@@ -386,7 +389,7 @@ body {
 
 .container-market .image-slider .caption h1 {
   margin: 0;
-  color: chocolate;
+  color: dodgerblue;
 }
 
 .container-market .image-slider .caption p {
@@ -431,10 +434,14 @@ body {
 .container-market .container-fluid .ps .p {
   font-size: 5em;
   text-transform: capitalize;
+  color: dodgerblue;
 }
 
 .container-market .container-fluid .images-1 {
   width: 80em;
+}
+.container-market .container-fluid .images-1 p {
+  color: black;
 }
 
 .container-market .container-fluid .container-sport .card-body .sport {
@@ -470,6 +477,7 @@ body {
 
 footer {
   color: white;
+  background-color: dodgerblue;
 }
 
 footer .baris-1 {
