@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #eaf1f1;
+}
+
+.container-body {
+  padding: 100px 0;
+}
+
+.container-body .images {
+  width: 100%;
+  height: 500px;
+  background-image: url(../foto/CAMERA.jpg);
+  background-position: center -250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.container-body .images .chevron {
+  transition: 0.1s;
+}
+
+.container-body .images .chevron:hover {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: dodgerblue;
+}
