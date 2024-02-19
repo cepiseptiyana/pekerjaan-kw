@@ -7,11 +7,23 @@ body {
   background-color: #eaf1f1;
 }
 
-.container-body {
-  padding: 100px 0;
+.container-body .p {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: 1em;
+  padding: 10px;
+  width: 200px;
+  color: white;
+  background-color: dodgerblue;
 }
 
-.container-body .images {
+.container-body {
+  padding: 20px 0;
+}
+
+.container-body .image {
   width: 100%;
   height: 500px;
   background-image: url(../foto/CAMERA.jpg);
@@ -24,13 +36,22 @@ body {
   color: white;
 }
 
-.container-body .images .chevron {
+.container-body .image .chevron {
   transition: 0.1s;
 }
 
-.container-body .images .chevron:hover {
+.container-body .image .chevron:hover {
   cursor: pointer;
   width: 50px;
   height: 50px;
   background-color: dodgerblue;
+}
+
+.container-body .container-images {
+  padding: 50px 0;
+}
+
+.container-body .container-images .row {
+  padding: 10px;
+  margin-bottom: 10px;
 }
