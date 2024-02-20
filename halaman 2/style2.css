@@ -20,6 +20,7 @@ body {
 }
 
 .container-body {
+  min-height: 100vh;
   padding: 20px 0;
 }
 
@@ -54,4 +55,42 @@ body {
 .container-body .container-images .row {
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.container-body .container-images .card-body .image {
+  margin: auto;
+  width: 100%;
+  height: 15em;
+  background-image: url(../foto/1.png);
+  background-position: center;
+  background-size: cover;
+}
+.container-body .container-images .card-body .image-2 {
+  background-image: url(../foto/CAMERA.jpg);
+}
+
+.container-body .container-images .card-body .image-3 {
+  background-image: url(../foto/sport2.jpg);
+  background-position: center -70px;
+  background-size: cover;
+}
+
+.container-body .container-images .card-body .image-4 {
+  background-image: url(../foto/strobery.jpg);
+}
+
+.container-body .container-images .card-body .image-5 {
+  background-image: url(../foto/wa.png);
+}
+.container-body .container-images .card-body .image-6 {
+  background-image: url(../foto/coffe\ 1.jpg);
+}
+.container-body .container-images .card-body .image-7 {
+  background-image: url(../foto/coffe\ 2.jpg);
+}
+.container-body .container-images .card-body .image-8 {
+  background-image: url(../foto/sport3.jpg);
+}
+.container-body .container-images .card-body .image-9 {
+  background-image: url(../foto/sport4.jpg);
 }

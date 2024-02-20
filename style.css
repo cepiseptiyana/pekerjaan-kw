@@ -61,7 +61,22 @@ body {
   color: black;
   padding: 0.5em;
 }
+.menu .menu-cover a {
+  text-decoration: none;
+  margin: 0;
+  color: black;
+  padding: 0.5em;
+}
 
+.menu .menu-cover a:hover {
+  color: white;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  transition: 0.1s;
+  transform: translate(-2px, -1px);
+  background-color: chocolate;
+  border-radius: 1em;
+}
 .menu .menu-cover p:hover {
   color: white;
   cursor: pointer;
@@ -233,23 +248,21 @@ body {
 }
 
 .jumbotron .container-mid {
-  width: 80%;
   padding: 30px;
 }
 
 .container-jumbotron .list {
   display: flex;
-  justify-content: center;
-  gap: 10em;
+  justify-content: space-around;
 }
 
 .container-jumbotron .human {
+  width: 30em;
+  height: 30em;
   background-image: url(foto/strobery.jpg);
   background-position: center;
   background-size: cover;
   box-shadow: 7px 7px 0 black;
-  width: 20em;
-  height: 20em;
   padding: 0.5em;
   transition: 0.3s;
 }
@@ -265,7 +278,7 @@ body {
 /* KANAN ATAS */
 
 .container-jumbotron .kanan-atas p {
-  color: dodgerblue;
+  color: rgb(77, 166, 255);
   font-size: 2em;
   font-family: sans-serif;
   text-transform: capitalize;
@@ -285,11 +298,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap: 1em;
+  gap: 2em;
 }
 
 .kanan-tengah .container .kotak {
-  width: 10em;
+  width: 21em;
+  height: 19em;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: 7px 7px 0 black;
   cursor: pointer;
@@ -303,24 +317,24 @@ body {
 
 .kanan-tengah .container .kotak-1 .image-1 {
   cursor: pointer;
-  width: 8.5em;
-  height: 8.5em;
+  width: 100%;
+  height: 13em;
   background-image: url(foto/strobery.jpg);
   background-position: center 20%;
   background-size: cover;
 }
 .kanan-tengah .container .kotak-2 .image-2 {
   cursor: pointer;
-  width: 8.5em;
-  height: 8.5em;
+  width: 100%;
+  height: 13em;
   background-image: url(foto/CAMERA.jpg);
   background-position: center 20%;
   background-size: cover;
 }
 .kanan-tengah .container .kotak-3 .image-3 {
   cursor: pointer;
-  width: 8.5em;
-  height: 8.5em;
+  width: 100%;
+  height: 13em;
   background-image: url(foto/wee.jpg);
   background-position: center 20%;
   background-size: cover;
@@ -341,7 +355,7 @@ body {
 }
 
 .kanan-tengah .container .kotak a:hover {
-  background-color: brown;
+  background-color: rgb(77, 166, 255);
 }
 
 /* CONTAINER MARKETPLACE */
@@ -353,7 +367,7 @@ body {
 
 .container-market p {
   text-transform: capitalize;
-  color: dodgerblue;
+  color: rgb(77, 166, 255);
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
@@ -389,7 +403,7 @@ body {
 
 .container-market .image-slider .caption h1 {
   margin: 0;
-  color: dodgerblue;
+  color: rgb(122, 188, 253);
 }
 
 .container-market .image-slider .caption p {
@@ -432,20 +446,36 @@ body {
 /* BARIS KEDUA */
 
 .container-market .container-fluid .ps .p {
+  text-align: center;
   font-size: 5em;
   text-transform: capitalize;
-  color: dodgerblue;
+  color: rgb(111, 183, 255);
 }
 
 .container-market .container-fluid .images-1 {
-  width: 80em;
+  width: 100em;
 }
+
 .container-market .container-fluid .images-1 p {
   color: black;
 }
 
+.container-market .container-fluid .container-sport,
+.container-market .container-fluid .container-camera,
+.container-market .container-fluid .container-strobery {
+  margin: auto;
+  width: 30em;
+  height: 28em;
+}
+
+.container-market .container-fluid .container-sport .card-body p,
+.container-market .container-fluid .container-camera .card-body p,
+.container-market .container-fluid .container-strobery .card-body p {
+  font-size: 12px;
+}
+
 .container-market .container-fluid .container-sport .card-body .sport {
-  width: 22em;
+  width: 100%;
   height: 15em;
   background-image: url(foto/sport2.jpg);
   background-position: center 30%;
@@ -453,7 +483,7 @@ body {
 }
 
 .container-market .container-fluid .container-camera .card-body .camera {
-  width: 22em;
+  width: 100%;
   height: 15em;
   background-image: url(foto/CAMERA.jpg);
   background-position: center;
@@ -461,7 +491,7 @@ body {
 }
 
 .container-market .container-fluid .container-strobery .card-body .strobery {
-  width: 22em;
+  width: 100%;
   height: 15em;
   background-image: url(foto/strobery.jpg);
   background-position: center;
@@ -477,7 +507,6 @@ body {
 
 footer {
   color: white;
-  background-color: dodgerblue;
 }
 
 footer .baris-1 {

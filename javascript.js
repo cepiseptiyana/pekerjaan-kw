@@ -6,25 +6,12 @@ let animasiLogoNavbar = [...logo.textContent]
   .join("");
 logo.innerHTML = animasiLogoNavbar;
 
-// STYLE
-// PARAGRAPH KONTAK
+// RESOURCES DOWN
 let containerBox = document.querySelector(".nav-container .box.toggle ");
 window.addEventListener("click", function (event) {
   if (event.target.className === "click-p")
     return (containerBox.style.display = "block");
   return (containerBox.style.display = "none");
-});
-
-// SEARCH
-let searchButton = document.querySelector(".nav-container .container-search");
-let paragparp = document.querySelector(".paragraph3");
-window.addEventListener("click", function (event) {
-  if (
-    event.target.className === "paragraph3" ||
-    event.target.className === "search"
-  )
-    return (searchButton.style.top = "100%");
-  return (searchButton.style.top = "-100px");
 });
 
 // CONTACT US KANAN
@@ -43,6 +30,18 @@ containerContact.addEventListener("click", function (event) {
 let noWa = document.querySelector(
   ".container-contact .contact-1 .contact .whatsapp"
 );
+
+// SEARCH
+let searchButton = document.querySelector(".nav-container .container-search");
+let paragparp = document.querySelector(".paragraph3");
+window.addEventListener("click", function (event) {
+  if (
+    event.target.className === "paragraph3" ||
+    event.target.className === "search"
+  )
+    return (searchButton.style.top = "100%");
+  return (searchButton.style.top = "-100px");
+});
 
 // JUMBOTRON
 // ANIMASI
