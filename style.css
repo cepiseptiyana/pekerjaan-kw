@@ -6,6 +6,7 @@
 body {
   font-size: 12px;
   position: relative;
+  background-color: red;
 }
 
 /* CONTAINER-NAVBAR */
@@ -13,8 +14,8 @@ body {
 .nav-container {
   padding: 20px;
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
   grid-template-rows: auto;
+  grid-template-columns: 200px 1fr 1fr;
   position: fixed;
   top: 0;
   right: 0;
@@ -100,6 +101,10 @@ body {
 }
 
 .nav-container .box.toggle {
+  display: none;
+}
+
+.nav-container .kolom {
   display: none;
 }
 
@@ -244,7 +249,7 @@ body {
 .jumbotron {
   padding-top: 100px;
   min-height: 100vh;
-  background-color: #eaf1f1;
+  background-color: #00ffff;
 }
 
 .jumbotron .container-mid {
@@ -539,3 +544,43 @@ footer .baris-1 {
     transform: rotateX(0deg);
   }
 }
+
+/* responsive */
+
+/* layar laptop */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    background-color: rgb(85, 255, 0);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-container .menu {
+    display: none;
+  }
+
+  .nav-container .kolom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-container .log-in {
+    display: none;
+  }
+
+  .container-jumbotron .list {
+    display: block;
+  }
+
+  .container-jumbotron .list .human {
+    margin-bottom: 2em;
+  }
+
+  /* .jumbotron {
+    width: 1200px;
+  } */
+}
+/* layar ipad */
+/* layar handphone */
