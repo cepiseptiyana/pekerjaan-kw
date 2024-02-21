@@ -367,7 +367,8 @@ body {
 
 /* BARIS PERTAMA SLIDER */
 .container-market {
-  width: 100%;
+  width: 80%;
+  background-color: blue;
 }
 
 .container-market p {
@@ -455,10 +456,6 @@ body {
   font-size: 5em;
   text-transform: capitalize;
   color: rgb(111, 183, 255);
-}
-
-.container-market .container-fluid .images-1 {
-  width: 100em;
 }
 
 .container-market .container-fluid .images-1 p {
@@ -550,7 +547,6 @@ footer .baris-1 {
 /* layar laptop */
 @media screen and (max-width: 768px) {
   .nav-container {
-    background-color: rgb(85, 255, 0);
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
