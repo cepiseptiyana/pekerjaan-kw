@@ -6,7 +6,6 @@
 body {
   font-size: 12px;
   position: relative;
-  background-color: red;
 }
 
 /* CONTAINER-NAVBAR */
@@ -97,14 +96,14 @@ body {
   display: flex;
   position: absolute;
   top: 100%;
-  background-color: rgb(120, 120, 167);
+  background-color: rgb(16, 16, 244);
 }
 
 .nav-container .box.toggle {
   display: none;
 }
 
-.nav-container .kolom {
+.nav-container .humburger {
   display: none;
 }
 
@@ -249,7 +248,6 @@ body {
 .jumbotron {
   padding-top: 100px;
   min-height: 100vh;
-  background-color: #00ffff;
 }
 
 .jumbotron .container-mid {
@@ -367,8 +365,7 @@ body {
 
 /* BARIS PERTAMA SLIDER */
 .container-market {
-  width: 80%;
-  background-color: blue;
+  width: 100%;
 }
 
 .container-market p {
@@ -451,32 +448,32 @@ body {
 
 /* BARIS KEDUA */
 
-.container-market .container-fluid .ps .p {
+.container-market .container .ps .p {
   text-align: center;
   font-size: 5em;
   text-transform: capitalize;
   color: rgb(111, 183, 255);
 }
 
-.container-market .container-fluid .images-1 p {
+.container-market .container .images-1 p {
   color: black;
 }
 
-.container-market .container-fluid .container-sport,
-.container-market .container-fluid .container-camera,
-.container-market .container-fluid .container-strobery {
+.container-market .container .container-sport,
+.container-market .container .container-camera,
+.container-market .container .container-strobery {
   margin: auto;
   width: 30em;
   height: 28em;
 }
 
-.container-market .container-fluid .container-sport .card-body p,
-.container-market .container-fluid .container-camera .card-body p,
-.container-market .container-fluid .container-strobery .card-body p {
+.container-market .container .container-sport .card-body p,
+.container-market .container .container-camera .card-body p,
+.container-market .container .container-strobery .card-body p {
   font-size: 12px;
 }
 
-.container-market .container-fluid .container-sport .card-body .sport {
+.container-market .container .container-sport .card-body .sport {
   width: 100%;
   height: 15em;
   background-image: url(foto/sport2.jpg);
@@ -484,7 +481,7 @@ body {
   background-size: cover;
 }
 
-.container-market .container-fluid .container-camera .card-body .camera {
+.container-market .container .container-camera .card-body .camera {
   width: 100%;
   height: 15em;
   background-image: url(foto/CAMERA.jpg);
@@ -492,7 +489,7 @@ body {
   background-size: cover;
 }
 
-.container-market .container-fluid .container-strobery .card-body .strobery {
+.container-market .container .container-strobery .card-body .strobery {
   width: 100%;
   height: 15em;
   background-image: url(foto/strobery.jpg);
@@ -501,14 +498,9 @@ body {
 }
 
 /* FOOTER */
-
-/* footer {
-  position: relative;
-  z-index: 0;
-} */
-
 footer {
-  color: white;
+  padding: 2em;
+  color: black;
 }
 
 footer .baris-1 {
@@ -544,7 +536,7 @@ footer .baris-1 {
 
 /* responsive */
 
-/* layar laptop */
+/* layar ipad */
 @media screen and (max-width: 768px) {
   .nav-container {
     display: grid;
@@ -556,10 +548,11 @@ footer .baris-1 {
     display: none;
   }
 
-  .nav-container .kolom {
+  .nav-container .humburger {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2em;
   }
 
   .nav-container .log-in {
@@ -567,16 +560,26 @@ footer .baris-1 {
   }
 
   .container-jumbotron .list {
-    display: block;
+    flex-wrap: wrap;
+    gap: 1em;
   }
 
-  .container-jumbotron .list .human {
-    margin-bottom: 2em;
+  .container-market .container .container-sport,
+  .container-market .container .container-camera,
+  .container-market .container .container-strobery {
+    margin: auto;
+    width: 40em;
+    height: 50em;
   }
 
-  /* .jumbotron {
-    width: 1200px;
-  } */
+  .container-market .container .container-sport .card-body p,
+  .container-market .container .container-camera .card-body p,
+  .container-market .container .container-strobery .card-body p {
+    font-size: 2em;
+  }
+
+  .container-market .container .container-sport .card-body .sport {
+    background-position: center 22%;
+  }
 }
-/* layar ipad */
 /* layar handphone */
