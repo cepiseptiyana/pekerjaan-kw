@@ -459,14 +459,6 @@ body {
   color: black;
 }
 
-.container-market .container .container-sport,
-.container-market .container .container-camera,
-.container-market .container .container-strobery {
-  margin: auto;
-  width: 30em;
-  height: 28em;
-}
-
 .container-market .container .container-sport .card-body p,
 .container-market .container .container-camera .card-body p,
 .container-market .container .container-strobery .card-body p {
@@ -536,6 +528,15 @@ footer .baris-1 {
 
 /* responsive */
 
+/* layar laptop */
+
+@media screen and (max-width: 1024px) {
+  .container-jumbotron .list {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+
 /* layar ipad */
 @media screen and (max-width: 768px) {
   .nav-container {
@@ -564,14 +565,6 @@ footer .baris-1 {
     gap: 1em;
   }
 
-  .container-market .container .container-sport,
-  .container-market .container .container-camera,
-  .container-market .container .container-strobery {
-    margin: auto;
-    width: 40em;
-    height: 50em;
-  }
-
   .container-market .container .container-sport .card-body p,
   .container-market .container .container-camera .card-body p,
   .container-market .container .container-strobery .card-body p {
@@ -583,3 +576,9 @@ footer .baris-1 {
   }
 }
 /* layar handphone */
+
+@media screen and (max-width: 600px) {
+  .kanan-tengah .container {
+    flex-wrap: wrap;
+  }
+}
