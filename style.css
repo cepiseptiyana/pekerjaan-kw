@@ -103,8 +103,19 @@ body {
   display: none;
 }
 
-.nav-container .humburger {
+.nav-container #hamburger {
   display: none;
+}
+
+.nav-container .menu-slide {
+  width: 40em;
+  min-height: 100vh;
+  background-color: rgba(30, 144, 255, 0.6);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  transition: 1s;
 }
 
 /* MENU BAGIAN KANAN */
@@ -542,18 +553,17 @@ footer .baris-1 {
   .nav-container {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 25px;
   }
 
   .nav-container .menu {
     display: none;
   }
 
-  .nav-container .humburger {
+  .nav-container #hamburger {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    font-size: 2em;
   }
 
   .nav-container .log-in {

@@ -43,6 +43,22 @@ window.addEventListener("click", function (event) {
   return (searchButton.style.top = "-100px");
 });
 
+// MENU-SLIDE
+// CARA INI DIGUNAKAN KETIKA TAG ELEMEN HTML BERUPA SVG
+// KARENA JIKA MENGGUNAKAN WINDOW.ADDEVENTLISTENER TIDAK BISA MENGAMBIL ELEMEN SVG KARENA TIDAK MEMILIKI CLASS / ID
+let menuSliderMenu = document.querySelector(".nav-container .menu-slide");
+let hamburgerMenu = document.querySelector("#hamburger");
+hamburgerMenu.addEventListener("click", function () {
+  menuSliderMenu.style.display = "block";
+});
+
+// MENU-SLIDE KETIKA DI KLIK DI LUAR MAKA DISPLAY NONE
+window.addEventListener("click", function (e) {
+  if (!hamburgerMenu.contains(e.target) && !menuSliderMenu.contains(e.target)) {
+    menuSliderMenu.style.display = "none";
+  }
+});
+
 // JUMBOTRON
 // ANIMASI
 // IMAGE GALERY
