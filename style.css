@@ -23,7 +23,8 @@ body {
 }
 
 .logo {
-  color: brown;
+  text-transform: uppercase;
+  color: rgba(30, 144, 255, 0.6);
   align-items: center;
   display: flex;
   font-size: 2em;
@@ -92,6 +93,7 @@ body {
   color: white;
 }
 
+/* BOX TOGGLE */
 .nav-container .box.toggle {
   display: flex;
   position: absolute;
@@ -103,18 +105,36 @@ body {
   display: none;
 }
 
+/* MENU HAMBURGER */
 .nav-container #hamburger {
   display: none;
 }
 
 .nav-container .menu-slide {
-  width: 40em;
+  border-top-left-radius: 1em;
+  width: 20em;
   min-height: 100vh;
   background-color: rgba(30, 144, 255, 0.6);
   position: absolute;
   top: 100%;
   right: -500px;
   transition: 0.2s;
+}
+
+.nav-container .menu-slide .container {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: white;
+  padding: 2em;
+}
+
+.nav-container .menu-slide .container .container-p a {
+  margin-bottom: 16px;
+  text-decoration: none;
+  display: block;
+  color: white;
 }
 
 /* MENU BAGIAN KANAN */
@@ -384,7 +404,6 @@ body {
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
-  padding: 0.5em;
 }
 
 .container-market .image-slider {
@@ -541,9 +560,18 @@ footer .baris-1 {
 /* layar laptop */
 
 @media screen and (max-width: 1024px) {
+  .jumbotron {
+    padding-top: 50px;
+    min-height: 100vh;
+  }
+
   .container-jumbotron .list {
     flex-wrap: wrap;
     gap: 1em;
+  }
+
+  .container-jumbotron .human {
+    margin-bottom: 1em;
   }
 }
 
@@ -552,7 +580,7 @@ footer .baris-1 {
   .nav-container {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 25px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .nav-container .menu {
@@ -572,6 +600,19 @@ footer .baris-1 {
   .container-jumbotron .list {
     flex-wrap: wrap;
     gap: 1em;
+  }
+
+  .container-market .container .images-1 .col-lg,
+  .container-market .container .images-2 .col-lg,
+  .container-market .container .images-3 .col-lg {
+    margin-bottom: 1em;
+  }
+
+  .container-market .container .container-sport,
+  .container-market .container .container-camera,
+  .container-market .container .container-strobery {
+    width: 70%;
+    margin: auto;
   }
 
   .container-market .container .container-sport .card-body p,
