@@ -48,14 +48,15 @@ window.addEventListener("click", function (event) {
 // KARENA JIKA MENGGUNAKAN WINDOW.ADDEVENTLISTENER TIDAK BISA MENGAMBIL ELEMEN SVG KARENA TIDAK MEMILIKI CLASS / ID
 let menuSliderMenu = document.querySelector(".nav-container .menu-slide");
 let hamburgerMenu = document.querySelector("#hamburger");
-hamburgerMenu.addEventListener("click", function () {
-  menuSliderMenu.style.display = "block";
+hamburgerMenu.addEventListener("click", function (event) {
+  menuSliderMenu.style.right = "0";
+  event.preventDefault();
 });
 
 // MENU-SLIDE KETIKA DI KLIK DI LUAR MAKA DISPLAY NONE
 window.addEventListener("click", function (e) {
   if (!hamburgerMenu.contains(e.target) && !menuSliderMenu.contains(e.target)) {
-    menuSliderMenu.style.display = "none";
+    menuSliderMenu.style.right = "-500px";
   }
 });
 

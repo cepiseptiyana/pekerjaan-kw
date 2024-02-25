@@ -113,9 +113,8 @@ body {
   background-color: rgba(30, 144, 255, 0.6);
   position: absolute;
   top: 100%;
-  right: 0;
-  display: none;
-  transition: 1s;
+  right: -500px;
+  transition: 0.2s;
 }
 
 /* MENU BAGIAN KANAN */
