@@ -60,6 +60,28 @@ window.addEventListener("click", function (e) {
   }
 });
 
+// SHOPPING-CART NAVBAR
+let jm = 0;
+let sh = document.querySelector(".nav-container #shopping-cart");
+let shJumlah = document.querySelector(".nav-container #shopping-cart .jumlah");
+let slideShop = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop"
+);
+
+sh.addEventListener("click", function (event) {
+  slideShop.style.display = "block";
+  event.preventDefault();
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target.className === "btn btn-info") {
+    jm += 1;
+    shJumlah.style.display = "block";
+  }
+  shJumlah.innerHTML = jm;
+  event.preventDefault();
+});
+
 // JUMBOTRON
 // ANIMASI
 // IMAGE GALERY
@@ -123,10 +145,9 @@ arrLeft.addEventListener("click", function () {
   // decrement image id
   nilaiAwal -= 1;
   // check if id is smaller than the number of available slides
-  nilaiAwal < 0 ? (id = images.length - 1) : console.log("false");
+  nilaiAwal < 0 ? (nilaiAwal = images.length - 1) : console.log("false");
   // run the slide function
   slide(nilaiAwal);
-  // console.log(id);
 });
 // add click even to left arrow
 arrRight.addEventListener("click", function () {

@@ -130,11 +130,32 @@ body {
   padding: 2em;
 }
 
-.nav-container .menu-slide .container .container-p a {
-  margin-bottom: 16px;
-  text-decoration: none;
-  display: block;
+/* SHOPPING-CART */
+.nav-container #shopping-cart {
+  display: none;
+  position: relative;
+}
+
+.nav-container #shopping-cart .jumlah {
+  display: none;
+  position: absolute;
   color: white;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  top: -10px;
+  right: 0;
+  background-color: dodgerblue;
+}
+
+/* SHOPPING-CART SLIDE-SHOP */
+.nav-container #shopping-cart .slide-shop {
+  display: none;
+  border-top-left-radius: 1em;
+  background-color: rgba(30, 144, 255, 0.6);
+  width: 45em;
+  height: 100vh;
+  top: 100%;
+  position: absolute;
 }
 
 /* MENU BAGIAN KANAN */
@@ -577,22 +598,32 @@ footer .baris-1 {
 
 /* layar ipad */
 @media screen and (max-width: 768px) {
+  /* NAVBAR */
   .nav-container {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 30px;
   }
 
   .nav-container .menu {
     display: none;
   }
 
+  /* HAMBURGER-MENU */
   .nav-container #hamburger {
     display: flex;
     justify-content: end;
     align-items: center;
   }
 
+  /* SHOPPING-CART */
+  .nav-container #shopping-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* NAVBAR MENU-LOGIN */
   .nav-container .log-in {
     display: none;
   }
