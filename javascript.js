@@ -81,23 +81,47 @@ document.addEventListener("click", function (e) {
   if (!shCart.contains(e.target)) return (slideShop.style.display = "none");
 });
 // MENAMBAH JUMLAH PADA KERANJANG SHOP
+let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
 let keranjangSlide = document.querySelector(
   ".nav-container #shopping-cart .slide-shop .container-krj .keranjang"
 );
-let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg"];
-containerJumlahKeranjang.addEventListener("click", function (event) {
-  if (event.target.className === "btn btn-info 1") {
-    jm += 1;
-    shJumlah.style.display = "block";
-    keranjangSlide.style.backgroundImage = `url(${imgKrj[0]})`;
-  }
-  if (event.target.className === "btn btn-info 2") {
-    jm += 1;
-    shJumlah.style.display = "block";
-    keranjangSlide.style.backgroundImage = `url(${imgKrj[1]})`;
-  }
-  shJumlah.innerHTML = jm;
-  event.preventDefault();
+// PERULANGAN TOMBOL KERANJANG
+let buttonKeranjang = Array.from(
+  document.querySelectorAll(
+    ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah .container .btn"
+  )
+);
+buttonKeranjang.forEach((e, i) => {
+  e.addEventListener("click", function (event) {
+    if (i == 0) {
+      jm += 1;
+      shJumlah.style.display = "block";
+      shJumlah.innerHTML = jm;
+      let elementKeranjang = document.createElement("img");
+      elementKeranjang.src = `${imgKrj[0]}`;
+      elementKeranjang.classList.add("active");
+      keranjangSlide.append(elementKeranjang);
+    }
+    if (i == 1) {
+      jm += 1;
+      shJumlah.style.display = "block";
+      shJumlah.innerHTML = jm;
+      let elementKeranjang = document.createElement("img");
+      elementKeranjang.src = `${imgKrj[1]}`;
+      elementKeranjang.classList.add("active");
+      keranjangSlide.append(elementKeranjang);
+    }
+    if (i == 2) {
+      jm += 1;
+      shJumlah.style.display = "block";
+      shJumlah.innerHTML = jm;
+      let elementKeranjang = document.createElement("img");
+      elementKeranjang.src = `${imgKrj[2]}`;
+      elementKeranjang.classList.add("active");
+      keranjangSlide.append(elementKeranjang);
+    }
+    event.preventDefault();
+  });
 });
 
 // JUMBOTRON

@@ -137,7 +137,7 @@ body {
 }
 
 .nav-container #shopping-cart .jumlah {
-  display: none;
+  /* display: none; */
   position: absolute;
   color: white;
   padding: 0 0.5em;
@@ -160,15 +160,15 @@ body {
 }
 
 .nav-container #shopping-cart .slide-shop .container-krj {
-  background-color: rgba(255, 0, 0, 0.415);
-  height: 200px;
   display: flex;
   justify-content: center;
 }
 
-.nav-container #shopping-cart .slide-shop .container-krj .keranjang {
-  width: 100px;
-  height: 100px;
+.nav-container #shopping-cart .slide-shop .container-krj .keranjang .active {
+  display: block;
+  width: 11em;
+  height: 11em;
+  margin-bottom: 1em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
