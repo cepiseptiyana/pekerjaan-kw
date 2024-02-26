@@ -14,7 +14,7 @@ body {
   padding: 20px;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 200px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   top: 0;
   right: 0;
@@ -152,10 +152,26 @@ body {
   display: none;
   border-top-left-radius: 1em;
   background-color: rgba(30, 144, 255, 0.6);
-  width: 45em;
+  width: 30em;
   height: 100vh;
   top: 100%;
+  right: 0;
   position: absolute;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj {
+  background-color: rgba(255, 0, 0, 0.415);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .keranjang {
+  width: 100px;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* MENU BAGIAN KANAN */

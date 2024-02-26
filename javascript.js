@@ -62,21 +62,39 @@ window.addEventListener("click", function (e) {
 
 // SHOPPING-CART NAVBAR
 let jm = 0;
-let sh = document.querySelector(".nav-container #shopping-cart");
+let shCart = document.querySelector(".nav-container #shopping-cart");
 let shJumlah = document.querySelector(".nav-container #shopping-cart .jumlah");
 let slideShop = document.querySelector(
   ".nav-container #shopping-cart .slide-shop"
 );
+let containerJumlahKeranjang = document.querySelector(
+  ".jumbotron .kanan-tengah .container"
+);
 
-sh.addEventListener("click", function (event) {
+// KLIK OPEN SLIDE SHOPPING
+shCart.addEventListener("click", function (e) {
   slideShop.style.display = "block";
-  event.preventDefault();
+  e.preventDefault();
 });
-
-window.addEventListener("click", (event) => {
-  if (event.target.className === "btn btn-info") {
+// KLIK CLOSE SLIDE SHOPPING
+document.addEventListener("click", function (e) {
+  if (!shCart.contains(e.target)) return (slideShop.style.display = "none");
+});
+// MENAMBAH JUMLAH PADA KERANJANG SHOP
+let keranjangSlide = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang"
+);
+let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg"];
+containerJumlahKeranjang.addEventListener("click", function (event) {
+  if (event.target.className === "btn btn-info 1") {
     jm += 1;
     shJumlah.style.display = "block";
+    keranjangSlide.style.backgroundImage = `url(${imgKrj[0]})`;
+  }
+  if (event.target.className === "btn btn-info 2") {
+    jm += 1;
+    shJumlah.style.display = "block";
+    keranjangSlide.style.backgroundImage = `url(${imgKrj[1]})`;
   }
   shJumlah.innerHTML = jm;
   event.preventDefault();
