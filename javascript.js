@@ -61,7 +61,6 @@ window.addEventListener("click", function (e) {
 });
 
 // SHOPPING-CART NAVBAR
-let jm = 0;
 let shCart = document.querySelector(".nav-container #shopping-cart");
 let shJumlah = document.querySelector(".nav-container #shopping-cart .jumlah");
 let slideShop = document.querySelector(
@@ -76,49 +75,48 @@ shCart.addEventListener("click", function (e) {
   slideShop.style.display = "block";
   e.preventDefault();
 });
-// KLIK CLOSE SLIDE SHOPPING
-document.addEventListener("click", function (e) {
-  if (!shCart.contains(e.target)) return (slideShop.style.display = "none");
-});
-// MENAMBAH JUMLAH PADA KERANJANG SHOP
-let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
-let keranjangSlide = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang"
-);
 // PERULANGAN TOMBOL KERANJANG
 let buttonKeranjang = Array.from(
   document.querySelectorAll(
     ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah .container .btn"
   )
 );
-buttonKeranjang.forEach((e, i) => {
+let cartImg = document.querySelector(
+  ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah"
+);
+// KLIK CLOSE SLIDE SHOPPING
+document.addEventListener("click", function (e) {
+  if (!shCart.contains(e.target) && !cartImg.contains(e.target)) {
+    slideShop.style.display = "none";
+  }
+});
+// MENAMBAH JUMLAH PADA KERANJANG SHOP
+let jm = 0;
+let st = 0;
+let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
+let keranjangSlide = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang"
+);
+buttonKeranjang.forEach((e, index) => {
   e.addEventListener("click", function (event) {
-    if (i == 0) {
+    if (index == 0) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
-      let elementKeranjang = document.createElement("img");
-      elementKeranjang.src = `${imgKrj[0]}`;
-      elementKeranjang.classList.add("active");
-      keranjangSlide.append(elementKeranjang);
+      // MASUKAN IMAGE & JUMLAH PEMBELIAN
+      st += 1;
+      keranjangSlide.classList.add("active");
+      keranjangSlide.nextElementSibling.innerHTML = st;
     }
-    if (i == 1) {
+    if (index == 1) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
-      let elementKeranjang = document.createElement("img");
-      elementKeranjang.src = `${imgKrj[1]}`;
-      elementKeranjang.classList.add("active");
-      keranjangSlide.append(elementKeranjang);
     }
-    if (i == 2) {
+    if (index == 2) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
-      let elementKeranjang = document.createElement("img");
-      elementKeranjang.src = `${imgKrj[2]}`;
-      elementKeranjang.classList.add("active");
-      keranjangSlide.append(elementKeranjang);
     }
     event.preventDefault();
   });

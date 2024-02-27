@@ -160,18 +160,26 @@ body {
 }
 
 .nav-container #shopping-cart .slide-shop .container-krj {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
-.nav-container #shopping-cart .slide-shop .container-krj .keranjang .active {
+/* CLASS ACTIVE STROBERY */
+.nav-container #shopping-cart .slide-shop .container-krj .active {
   display: block;
   width: 11em;
   height: 11em;
   margin-bottom: 1em;
+  background-image: url(foto/strobery.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+/* CLASS P JUMLAH PEMBELIAN */
+.nav-container #shopping-cart .slide-shop .container-krj .p {
+  color: white;
+  font-size: 2em;
+  border-radius: 2em;
+  background-color: brown;
 }
 
 /* MENU BAGIAN KANAN */
