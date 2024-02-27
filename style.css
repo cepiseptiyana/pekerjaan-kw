@@ -163,17 +163,30 @@ body {
   display: block;
 }
 
+.nav-container #shopping-cart .slide-shop .container-krj .jp p {
+  background: linear-gradient(
+    to right,
+    rgba(165, 42, 42, 0.6),
+    rgba(255, 0, 0, 0.6)
+  );
+  border-radius: 1em;
+  border: 1px white solid;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* CLASS ACTIVE STROBERY */
-.nav-container #shopping-cart .slide-shop .container-krj .active {
+.nav-container #shopping-cart .slide-shop .container-krj .keranjang-0 img,
+.nav-container #shopping-cart .slide-shop .container-krj .keranjang-1 img,
+.nav-container #shopping-cart .slide-shop .container-krj .keranjang-2 img {
   display: block;
   width: 11em;
   height: 11em;
-  margin-bottom: 1em;
-  background-image: url(foto/strobery.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 2em auto;
 }
+
 /* CLASS P JUMLAH PEMBELIAN */
 .nav-container #shopping-cart .slide-shop .container-krj .p {
   color: white;

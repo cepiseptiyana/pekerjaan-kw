@@ -81,6 +81,7 @@ let buttonKeranjang = Array.from(
     ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah .container .btn"
   )
 );
+// CARTIMAGE
 let cartImg = document.querySelector(
   ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah"
 );
@@ -93,9 +94,21 @@ document.addEventListener("click", function (e) {
 // MENAMBAH JUMLAH PADA KERANJANG SHOP
 let jm = 0;
 let st = 0;
+let jumlahStrobery = 0;
+let jumlahCamera = 0;
+let jumlahAlam = 0;
 let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
-let keranjangSlide = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang"
+let keranjangSlide0 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-0"
+);
+let JumlahPesanan = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-0"
+);
+let keranjangSlide1 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-1"
+);
+let keranjangSlide2 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-2"
 );
 buttonKeranjang.forEach((e, index) => {
   e.addEventListener("click", function (event) {
@@ -103,20 +116,24 @@ buttonKeranjang.forEach((e, index) => {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
-      // MASUKAN IMAGE & JUMLAH PEMBELIAN
       st += 1;
-      keranjangSlide.classList.add("active");
-      keranjangSlide.nextElementSibling.innerHTML = st;
+      jumlahStrobery += 1;
+      keranjangSlide0.innerHTML = `<img src="${imgKrj[0]}" alt="">`;
+      JumlahPesanan.innerHTML = `<p>jumlah : ${jumlahStrobery}</p>`;
     }
     if (index == 1) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
+      st += 1;
+      keranjangSlide1.innerHTML = `<img src="${imgKrj[1]}" alt="">`;
     }
     if (index == 2) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
+      st += 1;
+      keranjangSlide2.innerHTML = `<img src="${imgKrj[2]}" alt="">`;
     }
     event.preventDefault();
   });
