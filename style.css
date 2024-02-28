@@ -150,31 +150,40 @@ body {
 /* SHOPPING-CART SLIDE-SHOP */
 .nav-container #shopping-cart .slide-shop {
   display: none;
-  border-top-left-radius: 1em;
+  border-radius: 1em;
   background-color: rgba(30, 144, 255, 0.6);
-  width: 30em;
-  height: 100vh;
+  width: 24em;
+  height: 20em;
   top: 100%;
   right: 0;
   position: absolute;
+  overflow-y: scroll;
 }
 
-.nav-container #shopping-cart .slide-shop .container-krj {
-  display: block;
-}
-
-.nav-container #shopping-cart .slide-shop .container-krj .jp p {
-  background: linear-gradient(
-    to right,
-    rgba(165, 42, 42, 0.6),
-    rgba(255, 0, 0, 0.6)
-  );
+.nav-container #shopping-cart .slide-shop .container-krj .jp {
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
   border-radius: 1em;
-  border: 1px white solid;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
   color: white;
-  font-size: 2em;
-  text-align: center;
   text-transform: uppercase;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .jp div {
+  background-color: #0dcaf0;
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .jp div:hover {
+  background-color: rgb(54, 222, 255);
 }
 
 /* CLASS ACTIVE STROBERY */
@@ -184,15 +193,7 @@ body {
   display: block;
   width: 11em;
   height: 11em;
-  margin: 2em auto;
-}
-
-/* CLASS P JUMLAH PEMBELIAN */
-.nav-container #shopping-cart .slide-shop .container-krj .p {
-  color: white;
-  font-size: 2em;
-  border-radius: 2em;
-  background-color: brown;
+  margin: 1em auto;
 }
 
 /* MENU BAGIAN KANAN */

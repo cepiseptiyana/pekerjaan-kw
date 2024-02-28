@@ -70,11 +70,6 @@ let containerJumlahKeranjang = document.querySelector(
   ".jumbotron .kanan-tengah .container"
 );
 
-// KLIK OPEN SLIDE SHOPPING
-shCart.addEventListener("click", function (e) {
-  slideShop.style.display = "block";
-  e.preventDefault();
-});
 // PERULANGAN TOMBOL KERANJANG
 let buttonKeranjang = Array.from(
   document.querySelectorAll(
@@ -98,11 +93,17 @@ let jumlahStrobery = 0;
 let jumlahCamera = 0;
 let jumlahAlam = 0;
 let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
+let JumlahPesanan0 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .jp :nth-child(2) span"
+);
+let JumlahPesanan1 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-1 :nth-child(2) span"
+);
+let JumlahPesanan2 = document.querySelector(
+  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-2 :nth-child(2) span"
+);
 let keranjangSlide0 = document.querySelector(
   ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-0"
-);
-let JumlahPesanan = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-0"
 );
 let keranjangSlide1 = document.querySelector(
   ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-1"
@@ -119,24 +120,42 @@ buttonKeranjang.forEach((e, index) => {
       st += 1;
       jumlahStrobery += 1;
       keranjangSlide0.innerHTML = `<img src="${imgKrj[0]}" alt="">`;
-      JumlahPesanan.innerHTML = `<p>jumlah : ${jumlahStrobery}</p>`;
+      JumlahPesanan0.innerHTML = ` ${jumlahStrobery}`;
     }
     if (index == 1) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
       st += 1;
+      jumlahCamera += 1;
       keranjangSlide1.innerHTML = `<img src="${imgKrj[1]}" alt="">`;
+      JumlahPesanan1.innerHTML = ` ${jumlahCamera}`;
     }
     if (index == 2) {
       jm += 1;
       shJumlah.style.display = "block";
       shJumlah.innerHTML = jm;
       st += 1;
+      jumlahAlam += 1;
       keranjangSlide2.innerHTML = `<img src="${imgKrj[2]}" alt="">`;
+      JumlahPesanan2.innerHTML = ` ${jumlahAlam}`;
     }
     event.preventDefault();
   });
+});
+
+// KLIK OPEN SLIDE SHOPPING
+shCart.addEventListener("click", function (e) {
+  slideShop.style.display = "block";
+  if (e.target.className === "+") {
+    jumlahStrobery += 1;
+    JumlahPesanan0.innerHTML = `${jumlahStrobery}`;
+  }
+  if (e.target.className === "-") {
+    jumlahStrobery -= 1;
+    JumlahPesanan0.innerHTML = `${jumlahStrobery}`;
+  }
+  e.preventDefault();
 });
 
 // JUMBOTRON
