@@ -153,6 +153,7 @@ shCart.addEventListener("click", function (e) {
   }
   if (e.target.className === "-") {
     jumlahStrobery -= 1;
+    if (jumlahStrobery < 0) jumlahStrobery = 0;
     JumlahPesanan0.innerHTML = `${jumlahStrobery}`;
   }
   e.preventDefault();
