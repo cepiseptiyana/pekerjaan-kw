@@ -6,6 +6,8 @@
 body {
   font-size: 12px;
   position: relative;
+  /* height: 2000px; */
+  background-color: #d2d2d2;
 }
 
 /* CONTAINER-NAVBAR */
@@ -14,7 +16,7 @@ body {
   padding: 20px;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 50px;
   position: fixed;
   top: 0;
   right: 0;
@@ -23,8 +25,10 @@ body {
 }
 
 .logo {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 128, 0, 0.635);
+  border-radius: 1em;
   text-transform: uppercase;
-  color: rgba(30, 144, 255, 0.6);
   align-items: center;
   display: flex;
   font-size: 2em;
@@ -39,57 +43,40 @@ body {
 
 .logo span:hover {
   transform: scale(2);
+  color: white;
+  cursor: grab;
 }
 
 /* MENU BAGIAN TENGAH */
-
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
 
 .menu .menu-cover {
   text-transform: uppercase;
   font-family: sans-serif;
   display: flex;
-  justify-content: space-around;
-  align-items: end;
+  justify-content: space-evenly;
 }
 
 .menu .menu-cover p {
-  margin: 0;
-  color: black;
+  border-radius: 0.5em;
   padding: 0.5em;
 }
+
+.menu .menu-cover p:hover {
+  color: white;
+  cursor: grab;
+  border-top-left-radius: 0;
+  transition: 0.1s;
+  transform: translate(-2px, -1px);
+  background-color: rgb(69, 197, 0);
+  border-radius: 1em;
+}
+
 .menu .menu-cover a {
-  text-decoration: none;
-  margin: 0;
   color: black;
-  padding: 0.5em;
+  text-decoration: none;
 }
 
 .menu .menu-cover a:hover {
-  color: white;
-  cursor: pointer;
-  border-top-left-radius: 0;
-  transition: 0.1s;
-  transform: translate(-2px, -1px);
-  background-color: chocolate;
-  border-radius: 1em;
-}
-.menu .menu-cover p:hover {
-  color: white;
-  cursor: pointer;
-  border-top-left-radius: 0;
-  transition: 0.1s;
-  transform: translate(-2px, -1px);
-  background-color: chocolate;
-  border-radius: 1em;
-}
-
-.menu .menu-cover .kontak p:hover {
-  background-color: chocolate;
   color: white;
 }
 
@@ -130,70 +117,31 @@ body {
   padding: 2em;
 }
 
-/* SHOPPING-CART */
-.nav-container #shopping-cart {
-  display: none;
-  position: relative;
+/* ! nav kiri */
+
+.nav-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(52, 52, 52, 0.201);
+  padding-top: 4em;
+  text-align: center;
+  font-size: 2em;
 }
 
-.nav-container #shopping-cart .jumlah {
-  /* display: none; */
-  position: absolute;
+.nav-left a {
   color: white;
-  padding: 0 0.5em;
-  border-radius: 0.5em;
-  top: -10px;
-  right: 0;
-  background-color: dodgerblue;
-}
-
-/* SHOPPING-CART SLIDE-SHOP */
-.nav-container #shopping-cart .slide-shop {
-  display: none;
-  border-radius: 1em;
-  background-color: rgba(30, 144, 255, 0.6);
-  width: 24em;
-  height: 20em;
-  top: 100%;
-  right: 0;
-  position: absolute;
-  overflow-y: scroll;
-}
-
-.nav-container #shopping-cart .slide-shop .container-krj .jp {
-  height: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  border-radius: 1em;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  border-top: 1px white solid;
-  border-bottom: 1px white solid;
-  color: white;
-  text-transform: uppercase;
-}
-
-.nav-container #shopping-cart .slide-shop .container-krj .jp div {
-  background-color: #0dcaf0;
-  border: 1px solid white;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-}
-
-.nav-container #shopping-cart .slide-shop .container-krj .jp div:hover {
-  background-color: rgb(54, 222, 255);
-}
-
-/* CLASS ACTIVE STROBERY */
-.nav-container #shopping-cart .slide-shop .container-krj .keranjang-0 img,
-.nav-container #shopping-cart .slide-shop .container-krj .keranjang-1 img,
-.nav-container #shopping-cart .slide-shop .container-krj .keranjang-2 img {
   display: block;
-  width: 11em;
-  height: 11em;
-  margin: 1em auto;
+  text-decoration: none;
+}
+
+.nav-left a:hover {
+  cursor: pointer;
+  background-color: rgba(0, 198, 0, 0.589);
+  border-radius: 1em;
 }
 
 /* MENU BAGIAN KANAN */
@@ -212,11 +160,9 @@ body {
   align-items: center;
 }
 
-.nav-container .log-in .container-login :nth-child(1),
-.nav-container .log-in .container-login :nth-child(2),
-.nav-container .log-in .container-login :nth-child(3) {
+.nav-container .log-in .container-login p {
   font-size: 1em;
-  cursor: pointer;
+  cursor: grab;
   padding: 0.5em 1em;
 }
 
@@ -224,49 +170,139 @@ body {
   color: white;
   transition: 0.1s;
   transform: translate(-2px, -1px);
-  background-color: chocolate;
+  background-color: rgb(14, 168, 0);
   border-radius: 0.5em;
 }
 
 .nav-container .log-in .container-login :nth-child(3):hover {
-  background-color: chocolate;
+  background-color: rgb(26, 175, 0);
 }
 
-/* MENU SEARCH */
-.container-search {
-  width: 40em;
-  height: 2em;
-  position: absolute;
+/* SHOPPING-CART */
+.nav-container #shopping-cart {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-container #shopping-cart .i {
+  color: #000000;
+  cursor: grab;
+  width: 40px;
   display: flex;
   justify-content: center;
-  top: -100px;
-  right: 50px;
-  gap: 5px;
-  transition: 0.3s;
+  align-items: center;
 }
 
-.container-search .search {
-  border: 1px solid white;
-  width: 80%;
-  border-radius: 0.5em;
-  text-align: center;
-  text-transform: capitalize;
-  color: chocolate;
-}
-
-.container-search button {
-  font-size: 1.3em;
-  text-transform: capitalize;
-  padding: 0 1.3em;
-  border-radius: 1em;
-  border: 1px solid dodgerblue;
-}
-
-.container-search button:hover {
+.nav-container #shopping-cart .jumlah {
+  position: absolute;
   color: white;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  top: -10px;
+  right: 0;
   background-color: dodgerblue;
 }
-/* END MENU SEARCH */
+
+/* SHOPPING-CART SLIDE-SHOP */
+.nav-container #shopping-cart .slide-shop {
+  display: none;
+  border-radius: 1em;
+  background-color: rgba(114, 114, 114, 0.3);
+  width: 30em;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  overflow-y: scroll;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .head {
+  background-color: rgb(40, 209, 46);
+  margin: 0.4em;
+  padding: 0.2em;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em;
+  border-top: 1px black solid;
+  padding: 1em 0;
+}
+
+/*! CART ITEM */
+
+.nav-container #shopping-cart .slide-shop .container-krj #cartItem .cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-radius: 3px;
+  margin: 10px 10px;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .row-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .row-img
+  .rowing {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .delete {
+  cursor: pointer;
+  background-color: #0df0245c;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .delete:hover {
+  background-color: #0df024b0;
+}
 
 /* KONTAK WHATSAPP */
 .container-contact {
@@ -302,7 +338,7 @@ body {
 }
 
 .container-contact .contact a .whatsapp {
-  cursor: pointer;
+  cursor: grab;
   border-radius: 1em;
   margin: 1em auto;
   width: 50%;
@@ -320,7 +356,7 @@ body {
   bottom: 100%;
   color: white;
   text-align: center;
-  cursor: pointer;
+  cursor: grab;
   width: 2em;
   height: 2em;
   transition: 0.2s;
@@ -335,12 +371,9 @@ body {
 /* CONTAINER JUMBOTRON */
 /* KIRI  */
 .jumbotron {
+  padding-left: 250px;
   padding-top: 100px;
   min-height: 100vh;
-}
-
-.jumbotron .container-mid {
-  padding: 30px;
 }
 
 .container-jumbotron .list {
@@ -351,10 +384,6 @@ body {
 .container-jumbotron .human {
   width: 30em;
   height: 30em;
-  background-image: url(foto/strobery.jpg);
-  background-position: center;
-  background-size: cover;
-  box-shadow: 7px 7px 0 black;
   padding: 0.5em;
   transition: 0.3s;
 }
@@ -364,90 +393,68 @@ body {
 }
 
 .human.switch {
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.4s;
 }
 
-/* KANAN ATAS */
+/*! JUMBOTRON-MID KANAN ATAS */
 
 .container-jumbotron .kanan-atas p {
-  color: rgb(77, 166, 255);
   font-size: 2em;
   font-family: sans-serif;
   text-transform: capitalize;
   text-align: center;
 }
 
-/* KANAN TENGAH */
+/*! KANAN TENGAH */
 
-.kanan-tengah {
+.kanan-atas #kanan-tengah {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.kanan-tengah .container {
+.container-jumbotron .kanan-atas #kanan-tengah .box {
+  margin: 1em;
+  width: 225px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: auto;
-  gap: 2em;
+  border: 1px solid rgb(0, 140, 33);
+  border-radius: 1em;
 }
 
-.kanan-tengah .container .kotak {
-  width: 21em;
-  height: 19em;
-  border: 2px solid rgb(0, 0, 0);
-  box-shadow: 7px 7px 0 black;
-  cursor: pointer;
-  transition: 0.2s;
+.container-jumbotron .kanan-atas #kanan-tengah .box .img-box .imagesz {
+  cursor: grab;
+  width: 225px;
+  height: 180px;
+  border-radius: 1em;
+  filter: brightness(80%);
 }
 
-.kanan-tengah .container .kotak:hover {
-  transform: translateY(-5px);
-  box-shadow: 9px 9px 0 black;
+.container-jumbotron .kanan-atas #kanan-tengah .box .img-box .imagesz:hover {
+  filter: brightness(100%);
 }
 
-.kanan-tengah .container .kotak-1 .image-1 {
-  cursor: pointer;
+.container-jumbotron .kanan-atas #kanan-tengah .box .bottom {
   width: 100%;
-  height: 13em;
-  background-image: url(foto/strobery.jpg);
-  background-position: center 20%;
-  background-size: cover;
-}
-.kanan-tengah .container .kotak-2 .image-2 {
-  cursor: pointer;
-  width: 100%;
-  height: 13em;
-  background-image: url(foto/CAMERA.jpg);
-  background-position: center 20%;
-  background-size: cover;
-}
-.kanan-tengah .container .kotak-3 .image-3 {
-  cursor: pointer;
-  width: 100%;
-  height: 13em;
-  background-image: url(foto/wee.jpg);
-  background-position: center 20%;
-  background-size: cover;
 }
 
-.kanan-tengah .container .kotak a {
-  padding: 7px;
-  border-radius: 0.2em;
+.container-jumbotron .kanan-atas #kanan-tengah .box .bottom p {
+  margin: 0;
+}
+
+.container-jumbotron .kanan-atas #kanan-tengah .box .bottom button {
+  background-color: green;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 25px;
+  cursor: pointer;
   color: white;
-  display: block;
-  width: 50%;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1em;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  margin: auto;
 }
 
-.kanan-tengah .container .kotak a:hover {
-  background-color: rgb(77, 166, 255);
+.container-jumbotron .kanan-atas #kanan-tengah .box .bottom button:hover {
+  background-color: rgb(0, 185, 0);
 }
 
 /* CONTAINER MARKETPLACE */
@@ -459,7 +466,6 @@ body {
 
 .container-market p {
   text-transform: capitalize;
-  color: rgb(77, 166, 255);
   font-family: sans-serif;
   font-size: 2em;
   text-align: center;
@@ -467,11 +473,10 @@ body {
 
 .container-market .image-slider {
   position: relative;
-  background-color: red;
-  margin: auto;
+  margin: 3em auto;
   max-width: 30em;
   min-height: 30em;
-  background-image: url(foto/1.png);
+  background-image: url(foto/nastar1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -494,11 +499,11 @@ body {
 
 .container-market .image-slider .caption h1 {
   margin: 0;
-  color: rgb(122, 188, 253);
+  color: rgb(16, 160, 0);
 }
 
 .container-market .image-slider .caption p {
-  color: #8a8a8a;
+  color: #636363;
 }
 
 .container-market .image-slider .arrow-left,
@@ -540,57 +545,129 @@ body {
   text-align: center;
   font-size: 5em;
   text-transform: capitalize;
-  color: rgb(111, 183, 255);
+  background-color: #4b4b4b74;
+  color: rgba(255, 255, 255, 0.791);
+  border-radius: 0.5em;
 }
 
-.container-market .container .images-1 p {
-  color: black;
+.container-market .container .ss {
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 650px;
 }
 
-.container-market .container .container-sport .card-body p,
-.container-market .container .container-camera .card-body p,
-.container-market .container .container-strobery .card-body p {
-  font-size: 12px;
+.container-market .container .images-1 .a,
+.container-market .container .images-2 .a {
+  padding: 0;
 }
 
-.container-market .container .container-sport .card-body .sport {
+.container-market .container .images-1 .a .container-sport,
+.container-market .container .images-2 .a .container-sport {
+  width: 200px;
+  padding: 0.2em;
+}
+
+.container-market .container .images-1 .a .container-sport .card-bodi .sport,
+.container-market .container .images-2 .a .container-sport .card-bodi .sport {
+  filter: brightness(80%);
+  height: 14em;
   width: 100%;
-  height: 15em;
-  background-image: url(foto/sport2.jpg);
-  background-position: center 30%;
-  background-size: cover;
 }
 
-.container-market .container .container-camera .card-body .camera {
-  width: 100%;
-  height: 15em;
-  background-image: url(foto/CAMERA.jpg);
-  background-position: center;
-  background-size: cover;
+.container-market .container .images-1 .a .container-sport .card-bodi p,
+.container-market .container .images-2 .a .container-sport .card-bodi p {
+  margin: 0;
 }
 
-.container-market .container .container-strobery .card-body .strobery {
-  width: 100%;
-  height: 15em;
-  background-image: url(foto/strobery.jpg);
-  background-position: center;
-  background-size: cover;
+.container-market
+  .container
+  .images-1
+  .a
+  .container-sport
+  .card-bodi
+  .sport:hover,
+.container-market
+  .container
+  .images-2
+  .a
+  .container-sport
+  .card-bodi
+  .sport:hover {
+  filter: brightness(100%);
 }
 
-/* FOOTER */
-footer {
+/* ! FOOTER */
+.footer {
+  position: relative;
+  z-index: 9999;
   padding: 2em;
+  background-color: #00000050;
   color: black;
 }
 
-footer .baris-1 {
-  width: 50%;
-  margin: auto;
+/* ! kiri */
+
+.footer .container-fluid .bungkus {
+  display: flex;
+  gap: 2em;
+}
+
+.footer .container-fluid .bungkus #no-1 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.465);
   font-size: 1.5em;
-  font-family: courier;
-  font-weight: 550;
-  text-transform: capitalize;
+  padding: 0.5em;
   border-radius: 1em;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* ! tengah */
+
+.footer .container-fluid .bungkus #no-2 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.475);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.footer .container-fluid .bungkus #no-2 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* ! kanan */
+
+.footer .container-fluid .bungkus #no-3 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.489);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  padding: 0.5em;
+  color: white;
+}
+
+.footer .container-fluid .bungkus #no-3 a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.footer .container-fluid .bungkus #no-3 a:hover {
+  color: rgb(64, 255, 6);
 }
 
 /* animation */
@@ -607,10 +684,10 @@ footer .baris-1 {
 
 @keyframes marketPlace {
   from {
-    transform: rotateX(90deg);
+    transform: rotateY(90deg);
   }
   to {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg);
   }
 }
 
@@ -621,16 +698,81 @@ footer .baris-1 {
 @media screen and (max-width: 1024px) {
   .jumbotron {
     padding-top: 50px;
+    padding-left: 220px;
     min-height: 100vh;
   }
 
-  .container-jumbotron .list {
-    flex-wrap: wrap;
-    gap: 1em;
+  .jumbotron-produk {
+    padding-top: 50px;
+    padding-left: 200px;
+    min-height: 100vh;
   }
 
-  .container-jumbotron .human {
-    margin-bottom: 1em;
+  /* ! kanan tengah */
+
+  .kanan-atas #kanan-tengah {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .container-jumbotron .kanan-atas #kanan-tengah .box {
+    width: 150px;
+    font-size: 0.5em;
+  }
+
+  .container-jumbotron .kanan-atas #kanan-tengah .box .img-box .imagesz {
+    width: 150px;
+    height: 120px;
+  }
+
+  .container-jumbotron .kanan-atas #kanan-tengah .box .bottom p {
+    margin: 0;
+  }
+
+  .container-jumbotron .kanan-atas #kanan-tengah .box .bottom button {
+    font-size: 2em;
+    background-color: rgba(0, 128, 0, 0.332);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1px 25px;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* ! end  */
+
+  /* ! produk */
+
+  .container-market .container .ss {
+    width: 100%;
+  }
+
+  .container-market .container .images-1 .a .container-sport,
+  .container-market .container .images-2 .a .container-sport {
+    width: 150px;
+    padding: 0.2em;
+  }
+
+  .container-market .container .images-1 .a .container-sport .card-bodi .sport,
+  .container-market .container .images-2 .a .container-sport .card-bodi .sport {
+    filter: brightness(80%);
+    height: 10em;
+    width: 100%;
+  }
+
+  /* produk-card-jumbo2 */
+  .jumbotron-produk .produk-br-1 .produkss .card {
+    width: 70%;
+    margin: auto;
+  }
+
+  /* ! nav kiri */
+
+  .nav-left {
+    width: 200px;
   }
 }
 
@@ -671,33 +813,42 @@ footer .baris-1 {
     gap: 1em;
   }
 
-  .container-market .container .images-1 .col-lg,
-  .container-market .container .images-2 .col-lg,
-  .container-market .container .images-3 .col-lg {
-    margin-bottom: 1em;
-  }
-
-  .container-market .container .container-sport,
-  .container-market .container .container-camera,
-  .container-market .container .container-strobery {
+  .container-market .container .container-sport {
     width: 70%;
     margin: auto;
   }
 
-  .container-market .container .container-sport .card-body p,
-  .container-market .container .container-camera .card-body p,
-  .container-market .container .container-strobery .card-body p {
-    font-size: 2em;
-  }
-
-  .container-market .container .container-sport .card-body .sport {
-    background-position: center 22%;
+  .container-market .container .container-sport .card-bodi p {
+    font-size: 1em;
   }
 }
 /* layar handphone */
 
 @media screen and (max-width: 600px) {
-  .kanan-tengah .container {
+  .container {
     flex-wrap: wrap;
+  }
+
+  .jumbotron {
+    padding: 0;
+  }
+
+  .container-jumbotron .human {
+    width: 100%;
+    height: 20em;
+    padding: 0.5em;
+    transition: 0.3s;
+  }
+
+  .container-market .image-slider {
+    position: relative;
+    margin: auto;
+    width: 25em;
+    height: 25em;
+    background-image: url(foto/nastar1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
   }
 }

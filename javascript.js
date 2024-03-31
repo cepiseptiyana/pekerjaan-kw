@@ -26,23 +26,6 @@ containerContact.addEventListener("click", function (event) {
   return (containerContact.style.display = "block");
 });
 
-// CONTACT WHATSAPP
-let noWa = document.querySelector(
-  ".container-contact .contact-1 .contact .whatsapp"
-);
-
-// SEARCH
-let searchButton = document.querySelector(".nav-container .container-search");
-let paragparp = document.querySelector(".paragraph3");
-window.addEventListener("click", function (event) {
-  if (
-    event.target.className === "paragraph3" ||
-    event.target.className === "search"
-  )
-    return (searchButton.style.top = "100%");
-  return (searchButton.style.top = "-100px");
-});
-
 // MENU-SLIDE
 // CARA INI DIGUNAKAN KETIKA TAG ELEMEN HTML BERUPA SVG
 // KARENA JIKA MENGGUNAKAN WINDOW.ADDEVENTLISTENER TIDAK BISA MENGAMBIL ELEMEN SVG KARENA TIDAK MEMILIKI CLASS / ID
@@ -61,102 +44,128 @@ window.addEventListener("click", function (e) {
 });
 
 // SHOPPING-CART NAVBAR
-let shCart = document.querySelector(".nav-container #shopping-cart");
-let shJumlah = document.querySelector(".nav-container #shopping-cart .jumlah");
+let shCart = document.querySelector("#shopping-cart .i .feather");
 let slideShop = document.querySelector(
   ".nav-container #shopping-cart .slide-shop"
 );
-let containerJumlahKeranjang = document.querySelector(
-  ".jumbotron .kanan-tengah .container"
-);
 
-// PERULANGAN TOMBOL KERANJANG
-let buttonKeranjang = Array.from(
-  document.querySelectorAll(
-    ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah .container .btn"
-  )
-);
-// CARTIMAGE
-let cartImg = document.querySelector(
-  ".jumbotron .container-mid .container-jumbotron .kanan-atas .kanan-tengah"
-);
-// KLIK CLOSE SLIDE SHOPPING
-document.addEventListener("click", function (e) {
-  if (!shCart.contains(e.target) && !cartImg.contains(e.target)) {
+window.addEventListener("click", function (e) {
+  //! jika slideShop mengandung === e.target = slideShop display block;
+  if (e.target == shCart || slideShop.contains(e.target)) {
+    slideShop.style.display = "block";
+  } else {
     slideShop.style.display = "none";
   }
 });
-// MENAMBAH JUMLAH PADA KERANJANG SHOP
-let jm = 0;
-let st = 0;
-let jumlahStrobery = 0;
-let jumlahCamera = 0;
-let jumlahAlam = 0;
-let imgKrj = ["foto/strobery.jpg", "foto/CAMERA.jpg", "foto/wee.jpg"];
-let JumlahPesanan0 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .jp :nth-child(2) span"
-);
-let JumlahPesanan1 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-1 :nth-child(2) span"
-);
-let JumlahPesanan2 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .jumlahPesanan-2 :nth-child(2) span"
-);
-let keranjangSlide0 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-0"
-);
-let keranjangSlide1 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-1"
-);
-let keranjangSlide2 = document.querySelector(
-  ".nav-container #shopping-cart .slide-shop .container-krj .keranjang-2"
-);
-buttonKeranjang.forEach((e, index) => {
-  e.addEventListener("click", function (event) {
-    if (index == 0) {
-      jm += 1;
-      shJumlah.style.display = "block";
-      shJumlah.innerHTML = jm;
-      st += 1;
-      jumlahStrobery += 1;
-      keranjangSlide0.innerHTML = `<img src="${imgKrj[0]}" alt="">`;
-      JumlahPesanan0.innerHTML = ` ${jumlahStrobery}`;
-    }
-    if (index == 1) {
-      jm += 1;
-      shJumlah.style.display = "block";
-      shJumlah.innerHTML = jm;
-      st += 1;
-      jumlahCamera += 1;
-      keranjangSlide1.innerHTML = `<img src="${imgKrj[1]}" alt="">`;
-      JumlahPesanan1.innerHTML = ` ${jumlahCamera}`;
-    }
-    if (index == 2) {
-      jm += 1;
-      shJumlah.style.display = "block";
-      shJumlah.innerHTML = jm;
-      st += 1;
-      jumlahAlam += 1;
-      keranjangSlide2.innerHTML = `<img src="${imgKrj[2]}" alt="">`;
-      JumlahPesanan2.innerHTML = ` ${jumlahAlam}`;
-    }
-    event.preventDefault();
-  });
-});
 
-// KLIK OPEN SLIDE SHOPPING
-shCart.addEventListener("click", function (e) {
-  slideShop.style.display = "block";
-  if (e.target.className === "+") {
-    jumlahStrobery += 1;
-    JumlahPesanan0.innerHTML = `${jumlahStrobery}`;
+// MENAMBAH JUMLAH PADA KERANJANG SHOP
+
+let product = [
+  {
+    image: `foto/nastar1.jpg`,
+    title: `nastar`,
+    price: 60000,
+  },
+  {
+    image: `foto/salju.jpg`,
+    title: `kue salju`,
+    price: 60000,
+  },
+  {
+    image: `foto/kacang.jpg`,
+    title: `kue kacang`,
+    price: 55000,
+  },
+];
+
+// spread operator
+
+let categories = [
+  ...product.map((item) => {
+    return item;
+  }),
+];
+
+//! masukan input ke dalam element kanan-tengah
+//! variable categori dimasukan inputan tersebut;
+
+//! INCREMENT MENAMPILKAN NILAI AWAL;
+let i = 0;
+document.querySelector("#kanan-tengah").innerHTML = categories
+  .map((item) => {
+    //! DESTRUCTURING OBJECT
+    let { image, title, price } = item;
+    return `<div class="box">
+                <div class='img-box'>
+                  <img class='imagesz' src=${image}></img>
+                </div>
+            <div class='bottom'>
+              <p>${title}</p>
+              <p>Rp.${price}</p>
+      <button onclick=addtocart(${i++}) class="btnCart">add to cart</button>
+      </div>
+      </div>`;
+  })
+  .join("");
+
+// buat function onclick
+let cart = [];
+
+function addtocart(a) {
+  // JIKA YANG DI KLIK BUTTON INDEX 2 MAKA, AKAN DI CETAK VARIABLE "CATEGORIS" SEBANYAK YANG DI KLIK;
+  // KLIK BUTTON INDEX 2, MAKA CETAK "CATEGORIS" INDEX KE 2 PADA VARIABEL "CATEGORIS"
+  cart.push(categories[a]);
+  displayCart();
+}
+
+function delElement(a) {
+  cart.splice(a, 1);
+  displayCart();
+}
+
+//! FUNCTION MEMASUKAN KE DALAM KERANJANG
+
+function displayCart() {
+  let j = 0;
+  total = 0;
+  //! ANGKA UNTUK JUMLAH PESANAN
+  document.querySelector("#shopping-cart .jumlah").innerHTML = cart.length;
+  if (cart.length == 0) {
+    //!  jika cart 0 masukan id cartitem
+    document.getElementById("cartItem").innerHTML = "Your cart is empty";
+    //! jika kosong element total harga
+    document.querySelector(
+      "#shopping-cart .slide-shop .container-krj .foot #total"
+    ).innerHTML = `Rp.${0}`;
+  } else {
+    document.getElementById("cartItem").innerHTML = cart
+      .map((items) => {
+        let { image, title, price } = items;
+        //! jumlah total harga
+        total += price;
+        document.querySelector(
+          "#shopping-cart .slide-shop .container-krj .foot #total"
+        ).innerHTML = `Rp.${total}`;
+        return `<div class="cart-item">
+                  <div class="row-img">
+                    <img src="${image}" alt="" class="rowing">
+                  </div>
+                  <p style="font-size: 18px;">${title}</p>
+                  <h2 style="font-size: 1em;">Rp.${price}</h2>
+                  <div class=delete onclick='delElement(${j++})'>hapus</div>
+                </div>`;
+      })
+      .join("");
   }
-  if (e.target.className === "-") {
-    jumlahStrobery -= 1;
-    if (jumlahStrobery < 0) jumlahStrobery = 0;
-    JumlahPesanan0.innerHTML = `${jumlahStrobery}`;
-  }
-  e.preventDefault();
+}
+
+//! mematikan stopPropagation pada element CartItem;
+let elementDel = document.querySelector(
+  "#shopping-cart .slide-shop .container-krj #cartItem"
+);
+
+elementDel.addEventListener("click", function (e) {
+  e.stopPropagation();
 });
 
 // JUMBOTRON
@@ -165,19 +174,14 @@ shCart.addEventListener("click", function (e) {
 // PENGKONDISIAN
 let containerFotoJumbotron = document.querySelector(".container-jumbotron");
 let jumbotronImages = document.querySelector(".container-jumbotron .human");
-const arrayFoto = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
-let [a, b, c] = arrayFoto;
-function ubahFoto(nilai) {
-  jumbotronImages.style.backgroundImage = `url(foto/${nilai})`;
-  jumbotronImages.classList.add("switch");
-  setTimeout(function () {
-    jumbotronImages.classList.remove("switch");
-  });
-}
-containerFotoJumbotron.addEventListener("click", function (event) {
-  if (event.target.className === "image-1 mb-2") return ubahFoto(a);
-  if (event.target.className === "image-2 mb-2") return ubahFoto(b);
-  if (event.target.className === "image-3 mb-2") return ubahFoto(c);
+containerFotoJumbotron.addEventListener("click", function (e) {
+  if (e.target.className === "imagesz") {
+    jumbotronImages.src = e.target.src;
+    jumbotronImages.classList.add("switch");
+    setTimeout(() => {
+      jumbotronImages.classList.remove("switch");
+    }, 400);
+  }
 });
 
 // MARKETPLACE
@@ -190,13 +194,9 @@ let heading = document.querySelector(".caption h1");
 let description = document.querySelector(".caption p");
 
 // DATA FOR SLIDER
-const images = ["strobery.jpg", "CAMERA.jpg", "wee.jpg"];
-const headings = ["New York, USA", "Tokyo, Japan", "Dubai, UAE"];
-const descriptions = [
-  "the city that never sleeps",
-  "the city of anime",
-  "home to the tallest skyscraper",
-];
+const images = ["nastar1.jpg", "salju.jpg", "kacang.jpg"];
+const headings = ["Nastar", "Saljuuu", "Kacang"];
+const descriptions = ["nastar", "kue salju manisss", "kue kacang enak"];
 
 // SLIDER ID
 // the slider function
@@ -231,7 +231,93 @@ arrRight.addEventListener("click", function () {
   // increment image id
   nilaiAwal++;
   // check if id is greater than the number of available slides
-  nilaiAwal > images.length - 1 ? (nilaiAwal = 0) : console.log("false");
-  // run the slide function
-  slide(nilaiAwal);
+  if (nilaiAwal > images.length - 1) {
+    nilaiAwal = 0;
+    slide(nilaiAwal);
+  } else {
+    slide(nilaiAwal);
+    console.log("ok");
+  }
 });
+
+//! MARKETPLACE CARDS
+
+let marketPlaceProduct = [
+  {
+    image: "foto/nastar1.jpg",
+    description: "nastar",
+  },
+  {
+    image: `foto/salju.jpg`,
+    description: "kue salju",
+  },
+  {
+    image: `foto/kacang.jpg`,
+    description: "kue kacang",
+  },
+];
+
+let marketPlaceProduct2 = [
+  {
+    image: "foto/nastar1.jpg",
+    description: "nastar",
+  },
+  {
+    image: `foto/salju.jpg`,
+    description: "kue salju",
+  },
+  {
+    image: `foto/kacang.jpg`,
+    description: "kue kacang",
+  },
+];
+
+document.getElementById("cardsMarketPlace").innerHTML = marketPlaceProduct
+  .map((images) => {
+    //! DESTRUCTURING OBJECT
+    let { image, description } = images;
+    return `<div class="col-sm a">
+    <div class="card container-sport">
+      <div class="card-bodi">
+          <img src="${image}" alt="" class="sport">
+        <p class="p text-capitalize">${description}</p>
+      </div>
+    </div>
+  </div>`;
+  })
+  .join("");
+
+document.getElementById("cardsMarketPlace2").innerHTML = marketPlaceProduct2
+  .map((images) => {
+    //! DESTRUCTURING OBJECT
+    let { image, description } = images;
+    return `<div class="col-sm a">
+    <div class="card container-sport">
+      <div class="card-bodi">
+          <img src="${image}" alt="" class="sport">
+        <p class="p text-capitalize">${description}</p>
+      </div>
+    </div>
+  </div>`;
+  })
+  .join("");
+
+document.querySelector(
+  ".footer .container-fluid .bungkus #no-1"
+).innerHTML = `<div>kami menyediakan kue lebaran 
+enak nastar,kue salju,kue kacang,</div>
+  `;
+
+// ! tengah
+document.querySelector(
+  ".footer .container-fluid .bungkus #no-2"
+).innerHTML = `<img src="foto/nastar1.jpg" alt="">
+<img src="foto/salju.jpg" alt="">
+<img src="foto/kacang.jpg" alt="">
+`;
+
+// ! kanan
+document.querySelector(".footer .container-fluid .bungkus #no-3").innerHTML = `
+<a href="https://wa.me/6285659519463/?text=Hello">klik untuk hubungi</a>
+<h5 href="">gmail :</h5>
+<p>cepifams3@gmail.com</p>`;

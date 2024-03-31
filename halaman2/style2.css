@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: red;
+  font-size: 12px;
+  position: relative;
+  background-color: #d2d2d2;
+}
+
+/* CONTAINER-NAVBAR */
+
+.nav-container {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 50px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 128, 0, 0.635);
+  border-radius: 1em;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  font-size: 1.5em;
+  font-family: sans-serif;
+  justify-content: center;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  transition: 0.2s;
+}
+
+.logo span:hover {
+  transform: scale(2);
+  color: white;
+  cursor: grab;
+}
+
+/* MENU BAGIAN TENGAH */
+
+.menu .menu-cover {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu .menu-cover p {
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.menu .menu-cover p:hover {
+  color: white;
+  cursor: grab;
+  border-top-left-radius: 0;
+  transition: 0.1s;
+  transform: translate(-2px, -1px);
+  background-color: rgb(69, 197, 0);
+  border-radius: 1em;
+}
+
+.menu .menu-cover a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu .menu-cover a:hover {
+  color: white;
+}
+
+/* BOX TOGGLE */
+.nav-container .box.toggle {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  background-color: rgb(16, 16, 244);
+}
+
+.nav-container .box.toggle {
+  display: none;
+}
+
+/* MENU HAMBURGER */
+.nav-container #hamburger {
+  display: none;
+}
+
+.nav-container .menu-slide {
+  border-top-left-radius: 1em;
+  width: 20em;
+  min-height: 100vh;
+  background-color: rgba(30, 144, 255, 0.6);
+  position: absolute;
+  top: 100%;
+  right: -500px;
+  transition: 0.2s;
+}
+
+.nav-container .menu-slide .container {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: white;
+  padding: 2em;
+}
+
+/* ! nav kiri */
+
+.nav-left {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(52, 52, 52, 0.201);
+  padding-top: 4em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.nav-left a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-left a:hover {
+  cursor: pointer;
+  background-color: rgba(0, 198, 0, 0.589);
+  border-radius: 1em;
+}
+
+/* MENU BAGIAN KANAN */
+
+.nav-container .log-in {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-container .log-in .container-login {
+  color: black;
+  font-family: sans-serif;
+  display: flex;
+  width: 500px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-container .log-in .container-login p {
+  font-size: 1em;
+  cursor: grab;
+  padding: 0.5em 1em;
+}
+
+.nav-container .log-in .container-login p:hover {
+  color: white;
+  transition: 0.1s;
+  transform: translate(-2px, -1px);
+  background-color: rgb(14, 168, 0);
+  border-radius: 0.5em;
+}
+
+.nav-container .log-in .container-login :nth-child(3):hover {
+  background-color: rgb(26, 175, 0);
+}
+
+/* SHOPPING-CART */
+.nav-container #shopping-cart {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-container #shopping-cart .i {
+  color: #000000;
+  cursor: grab;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container #shopping-cart .jumlah {
+  position: absolute;
+  color: white;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  top: -10px;
+  right: 0;
+  background-color: dodgerblue;
+}
+
+/* SHOPPING-CART SLIDE-SHOP */
+.nav-container #shopping-cart .slide-shop {
+  display: none;
+  border-radius: 1em;
+  background-color: rgba(114, 114, 114, 0.3);
+  width: 30em;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  overflow-y: scroll;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj {
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .head {
+  background-color: rgb(40, 209, 46);
+  margin: 0.4em;
+  padding: 0.2em;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.nav-container #shopping-cart .slide-shop .container-krj .foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em;
+  border-top: 1px black solid;
+  padding: 1em 0;
+}
+
+/*! CART ITEM */
+
+.nav-container #shopping-cart .slide-shop .container-krj #cartItem .cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-radius: 3px;
+  margin: 10px 10px;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .row-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4em;
+  height: 4em;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .row-img
+  .rowing {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .delete {
+  cursor: pointer;
+  background-color: #0df0245c;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+.nav-container
+  #shopping-cart
+  .slide-shop
+  .container-krj
+  #cartItem
+  .cart-item
+  .delete:hover {
+  background-color: #0df024b0;
+}
+
+/* KONTAK WHATSAPP */
+.container-contact {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+}
+
+.container-contact .contact-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container-contact .contact {
+  position: relative;
+  border-radius: 1em;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-contact .contact p {
+  margin-bottom: 0;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  color: rgb(27, 177, 27);
+}
+
+.container-contact .contact a .whatsapp {
+  cursor: grab;
+  border-radius: 1em;
+  margin: 1em auto;
+  width: 50%;
+  height: 20em;
+  background-image: url(../foto/wa.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container-contact .contact .close {
+  background-color: rgba(36, 141, 62, 0.493);
+  position: absolute;
+  left: 100%;
+  bottom: 100%;
+  color: white;
+  text-align: center;
+  cursor: grab;
+  width: 2em;
+  height: 2em;
+  transition: 0.2s;
+}
+
+.container-contact .contact .close:hover {
+  background-color: rgba(36, 141, 62, 0.3);
+  border-top-left-radius: 1em;
+}
+/* END KONTAK WHATSAPP */
+
+/* ! JUMBOTRON PRODUK halaman Menu*/
+
+.jumbotron-produk {
+  padding-left: 200px;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.jumbotron-produk .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 800px;
+}
+
+.jumbotron-produk .produk-br-1 .produkss,
+.jumbotron-produk .produk-br-2 .produkss {
+  padding: 0;
+}
+
+.jumbotron-produk .produk-br-1 .produkss .card,
+.jumbotron-produk .produk-br-2 .produkss .card {
+  padding: 0.2em;
+  width: 260px;
+  margin: auto;
+}
+
+.jumbotron-produk .produk-br-1 .produkss .card-produkss p,
+.jumbotron-produk .produk-br-2 .produkss .card-produkss p {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 2px;
+  color: #444444;
+}
+
+.jumbotron-produk .produk-br-1 .produkss .card-produkss .produksss,
+.jumbotron-produk .produk-br-2 .produkss .card-produkss .produksss {
+  filter: brightness(80%);
+  height: 17.5em;
+  width: 100%;
+}
+
+.jumbotron-produk .produk-br-1 .produkss .card-produkss .produksss:hover,
+.jumbotron-produk .produk-br-2 .produkss .card-produkss .produksss:hover {
+  filter: brightness(100%);
+}
+
+.jumbotron-produk .produk-br-1 .produkss .btn,
+.jumbotron-produk .produk-br-2 .produkss .btn {
+  width: 150px;
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  z-index: 9999;
+  padding: 2em;
+  background-color: #00000050;
+  color: black;
+}
+
+/* ! kiri */
+
+.footer .container-fluid .bungkus {
+  display: flex;
+  gap: 2em;
+}
+
+.footer .container-fluid .bungkus #no-1 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.465);
+  font-size: 1.5em;
+  padding: 0.5em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* ! tengah */
+
+.footer .container-fluid .bungkus #no-2 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.475);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.footer .container-fluid .bungkus #no-2 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* ! kanan */
+
+.footer .container-fluid .bungkus #no-3 {
+  border: 1px white solid;
+  background-color: rgba(0, 185, 0, 0.489);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  padding: 0.5em;
+  color: white;
+}
+
+.footer .container-fluid .bungkus #no-3 a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 1.3em;
+  text-transform: capitalize;
+}
+
+.footer .container-fluid .bungkus #no-3 a:hover {
+  color: rgb(64, 255, 6);
+}
+
+/* ! responsive */
+
+/* ! layar laptop */
+
+@media screen and (max-width: 1024px) {
+  /* ! jumbotron produk */
+  .jumbotron-produk {
+    padding-left: 120px;
+    padding-top: 100px;
+    min-height: 100vh;
+  }
+
+  .jumbotron-produk .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 520px;
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss,
+  .jumbotron-produk .produk-br-2 .produkss {
+    padding: 0;
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss .card,
+  .jumbotron-produk .produk-br-2 .produkss .card {
+    padding: 0.2em;
+    width: 170px;
+    margin: auto;
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss .card-produkss p,
+  .jumbotron-produk .produk-br-2 .produkss .card-produkss p {
+    margin: 0;
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss .card-produkss .produksss,
+  .jumbotron-produk .produk-br-2 .produkss .card-produkss .produksss {
+    filter: brightness(80%);
+    height: 11em;
+    width: 100%;
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss .card-produkss .produksss:hover,
+  .jumbotron-produk .produk-br-2 .produkss .card-produkss .produksss:hover {
+    filter: brightness(100%);
+  }
+
+  .jumbotron-produk .produk-br-1 .produkss .btn,
+  .jumbotron-produk .produk-br-2 .produkss .btn {
+    width: 110px;
+    font-size: 1.2em;
+  }
+
+  /* ! nav kiri */
+
+  .nav-left {
+    width: 120px;
+  }
+
+  /* ! container login */
+  .nav-container .log-in {
+    display: none;
+  }
+}
+
+/* layar ipad */
+@media screen and (max-width: 768px) {
+  /* NAVBAR */
+  .nav-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 30px;
+  }
+
+  .nav-container .menu {
+    display: none;
+  }
+
+  /* HAMBURGER-MENU */
+  .nav-container #hamburger {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  /* SHOPPING-CART */
+  .nav-container #shopping-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* layar handphone */
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .jumbotron {
+    padding: 0;
+  }
+
+  .container-jumbotron .human {
+    width: 100%;
+    height: 20em;
+    padding: 0.5em;
+    transition: 0.3s;
+  }
+
+  .container-market .image-slider {
+    position: relative;
+    margin: auto;
+    width: 25em;
+    height: 25em;
+    background-image: url(foto/nastar1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+  }
+}

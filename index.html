@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aero</title>
+    <title>Yuns & Cake</title>
     <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -16,49 +16,20 @@
     <!-- FEATHER-ICON -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
     <!-- NAVBAR -->
     <!-- CONTAINER-FIXED -->
     <div class="nav-container">
-      <div class="logo">marketplace</div>
+      <div class="logo">KueNastar</div>
       <div class="menu">
         <div class="menu-cover">
-          <a href="halaman 2/index2.html" target="_blank">menu</a>
+          <p><a href="halaman 2/index2.html" target="_blank">menu</a></p>
           <p>promo</p>
           <div class="kontak">
             <p class="click-p">resources</p>
           </div>
         </div>
       </div>
-      <!-- MENU HAMBURGER & SHOPPING -->
-      <a href="#" id="hamburger"><i data-feather="menu"></i></a>
-      <!-- MENU SLIDE SHOPPING -->
-      <a href="#" id="shopping-cart">
-        <i data-feather="shopping-cart"></i>
-        <div class="jumlah"></div>
-        <div class="slide-shop">
-          <div class="container-krj">
-            <div class="keranjang-0"></div>
-            <div class="jp jumlahPesanan-0">
-              <div class="+">+</div>
-              <div>jumlah :<span></span></div>
-              <div class="-">-</div>
-            </div>
-            <div class="keranjang-1"></div>
-            <div class="jp jumlahPesanan-1">
-              <div>+</div>
-              <div>jumlah :<span></span></div>
-              <div>-</div>
-            </div>
-            <div class="keranjang-2 m-auto"></div>
-            <div class="jp jumlahPesanan-2">
-              <div>+</div>
-              <div>jumlah :<span></span></div>
-              <div>-</div>
-            </div>
-          </div>
-        </div>
-      </a>
+      
       <!-- MENU SLIDE -->
       <div class="menu-slide">
         <div class="container">
@@ -76,16 +47,36 @@
       <!-- MENU LOGIN -->
       <div class="log-in">
         <div class="container-login">
-          <p>CONTACT US</p>
+          <p>HUBUNGI KAMI</p>
           <p>MENU</p>
-          <p class="paragraph3">SEARCH</p>
+          <!-- ! menu search <p class="paragraph3">SEARCH</p> -->
         </div>
       </div>
-      <!-- MENU SEARCH -->
-      <div class="container-search">
-        <input type="search" class="search" placeholder="cari disini" />
-        <button>click</button>
+
+      <!-- MENU HAMBURGER & SHOPPING -->
+      <a href="#" id="hamburger"><i data-feather="menu"></i></a>
+      <!-- MENU SLIDE SHOPPING -->
+      <div id="shopping-cart">
+        <div class="i"><i data-feather="shopping-cart" id="svg-1"></i></div>
+        <div class="jumlah"></div>
+        <div class="slide-shop">
+          <div class="container-krj">
+            <div class="head">My cart</div>
+            <div id="cartItem" class="cartitem1">Your cart is empty</div>
+            <div class="foot">
+              <h3>Total</h3>
+              <h2 id="total"></h2>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- ! nav kiri -->
+    <div class="nav-left">
+      <a href="index.html" class="p-produk-2">Halaman</a>
+      <a href = "halaman2/kueLebaran.html" class="p-produk-1">Menu</a>
+      <a href="#">nastar</a>
     </div>
     <!-- KONTAK WHATSAPP -->
     <div class="container-contact">
@@ -110,34 +101,12 @@
           <div class="col list">
             <!-- FOTO KIRI-->
             <!-- berubah ketika sudah di klik -->
-            <div class="human"></div>
+            <img src="foto/nastar1.jpg" alt="" class="human">
             <!-- KANAN ATAS -->
             <div class="kanan-atas">
-              <p>Start Here to choice</p>
-              <p>Select the image according to your wishes:</p>
+              <p>pilih & buy</p>
               <!-- KANAN TENGAH -->
-              <div class="kanan-tengah">
-                <div class="container">
-                  <div class="card text-center kotak kotak-1">
-                    <div class="card-body">
-                      <!-- apenchild gambar di klik -->
-                      <div class="image-1 mb-2"></div>
-                      <a href="#" class="btn btn-info 1">simpan</a>
-                    </div>
-                  </div>
-                  <div class="card text-center kotak kotak-2">
-                    <div class="card-body">
-                      <div class="image-2 mb-2"></div>
-                      <a href="#" class="btn btn-info 2">simpan</a>
-                    </div>
-                  </div>
-                  <div class="card text-center kotak kotak-3">
-                    <div class="card-body">
-                      <div class="image-3 mb-2"></div>
-                      <a href="#" class="btn btn-info 3">simpan</a>
-                    </div>
-                  </div>
-                </div>
+              <div id="kanan-tengah"></div>
               </div>
             </div>
           </div>
@@ -155,88 +124,34 @@
             <i data-feather="chevron-right"></i>
           </div>
           <div class="caption">
-            <h1>Galery</h1>
-            <p>the city that never sleep</p>
+            <h1>Kue lebaran</h1>
+            <p>enak sekali</p>
           </div>
         </div>
         <div class="container">
           <div class="row container m-auto ps">
-            <div class="col p">tentang dan hal menarik</div>
+            <div class="col p">library</div>
           </div>
-          <div class="row m-auto images-1">
-            <div class="col-lg">
-              <div class="card container-sport">
-                <div class="card-body">
-                  <div class="sport m-auto"></div>
-                  <p class="p text-capitalize">
-                    Olahraga adalah semua bentuk aktivitas fisik yang dilakukan
-                    baik dalam bentuk kompetitif atau juga santai. Olahraga pada
-                    umumnya bertujuan untuk memelihara atau meningkatkan
-                    kemampuan dan keterampilan fisik sambil memberikan efek
-                    relaksasi ke orang yang melakukan olahraga dan hiburan ke
-                    orang yang menonton.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="card container-camera">
-                <div class="card-body">
-                  <div class="camera m-auto"></div>
-                  <p class="text-capitalize">
-                    Kamera atau tustel adalah alat yang digunakan untuk
-                    mengambil dan menyimpan gambar dan video, baik secara
-                    digital melalui sensor gambar elektronik, atau secara kimia
-                    melalui bahan peka cahaya seperti film gulung. Kamera
-                    merupakan alat paling populer dalam kegiatan fotografi.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg">
-              <div class="card container-strobery">
-                <div class="card-body">
-                  <div class="strobery m-auto"></div>
-                  <p class="text-capitalize">
-                    Buah stroberi (Fragaria x ananassa Duch.) adalah buah dengan
-                    kulit merah dengan bintik-bintik putih di bagian kulit yang
-                    merupakan bijinya, buah ini berwarna merah ketika sudah
-                    masak dan hijau ketika masih muda.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="container ss">
+            <div class="row images-1" id="cardsMarketPlace"></div>
+            <div class="row images-2" id="cardsMarketPlace2"></div>
           </div>
         </div>
       </section>
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
       <div class="container-fluid">
-        <div class="row baris-1">
-          <div class="col text-center">
-            <p>
-              Free Website Plans, And Beyond. From start to finish, the
-              Website.com builder provides all the features you need to create
-              your entire website for free. When you're looking to advance to
-              the next level, we've got the premium website features to extend
-              your business.
-            </p>
-          </div>
-        </div>
-        <div class="row baris-2">
-          <div class="col text-center">
-            <p>AERO</p>
-            <p>copyright : 2023 - TODAY</p>
-            <i data-feather="youtube"></i>
-            <i data-feather="phone"></i>
-            <i data-feather="mail"></i>
-          </div>
+        <div class="row text-center bungkus">
+          <div class="col-sm" id="no-1"></div>
+          <div class="col-sm" id="no-2"></div>
+          <div class="col-sm" id="no-3"></div>
         </div>
       </div>
     </footer>
-
+    
+    
     <!-- FEATHER-ICON -->
     <script>
       feather.replace();
