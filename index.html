@@ -3,106 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>keripik.com</title>
+    <title>Yuns & Cake</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- STYLE CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- FEATHER-ICON -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
-    <!-- navbar -->
+    <!-- NAVBAR -->
+    <!-- CONTAINER-FIXED -->
     <div class="nav-container">
-      <div class="logo"></div>
+      <div class="logo">KueNastar</div>
       <div class="menu">
         <div class="menu-cover">
-          <p>produk</p>
+          <p><a href="halaman 2/index2.html" target="_blank">menu</a></p>
           <p>promo</p>
-          <p>produk segar</p>
-          <p>snack</p>
           <div class="kontak">
-            <p>
-              kontak
-              <i id="e" data-feather="chevron-down"></i>
-            </p>
-            <div class="box toggle">
-              <div class="kolom">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus sequi, ex, expedita rem soluta aliquid quaerat, dolore
-                explicabo omnis alias aliquam atque dolor commodi. Expedita
-                eligendi neque provident eos iste! Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Accusamus sequi, ex, expedita rem
-                soluta aliquid quaerat, dolore explicabo omnis alias aliquam
-                atque dolor commodi. Expedita eligendi neque provident eos iste!
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus sequi, ex, expedita rem soluta aliquid quaerat, dolore
-                explicabo omnis alias aliquam atque dolor commodi. Expedita
-                eligendi neque provident eos iste! Lorem ipsum dolor, sit amet
-                consectetur adipisicing elit. Accusamus sequi, ex, expedita rem
-                soluta aliquid quaerat, dolore explicabo omnis alias aliquam
-                atque dolor commodi. Expedita eligendi neque provident eos iste!
-              </div>
+            <p class="click-p">resources</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MENU SLIDE -->
+      <div class="menu-slide">
+        <div class="container">
+          <div class="container-shopping bg-warning">
+            <div class="shopping">s</div>
+          </div>
+        </div>
+      </div>
+      <div class="box toggle">
+        <div class="kolom">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          voluptate sed magnam repudiandae officia dolore consequatur labore
+        </div>
+      </div>
+      <!-- MENU LOGIN -->
+      <div class="log-in">
+        <div class="container-login">
+          <p>HUBUNGI KAMI</p>
+          <p>MENU</p>
+          <!-- ! menu search <p class="paragraph3">SEARCH</p> -->
+        </div>
+      </div>
+
+      <!-- MENU HAMBURGER & SHOPPING -->
+      <a href="#" id="hamburger"><i data-feather="menu"></i></a>
+      <!-- MENU SLIDE SHOPPING -->
+      <div id="shopping-cart">
+        <div class="i"><i data-feather="shopping-cart" id="svg-1"></i></div>
+        <div class="jumlah"></div>
+        <div class="slide-shop">
+          <div class="container-krj">
+            <div class="head">My cart</div>
+            <div id="cartItem" class="cartitem1">Your cart is empty</div>
+            <div class="foot">
+              <h3>Total</h3>
+              <h2 id="total"></h2>
             </div>
           </div>
         </div>
       </div>
-      <div class="log-in">
-        <div class="container-login">
-          <p>CONTACT US</p>
-          <p>LOG IN</p>
-          <p>SIGN UP</p>
+    </div>
+
+    <!-- ! nav kiri -->
+    <div class="nav-left">
+      <a href="index.html" class="p-produk-2">Halaman</a>
+      <a href = "halaman2/kueLebaran.html" class="p-produk-1">Menu</a>
+      <a href="#">nastar</a>
+    </div>
+    <!-- KONTAK WHATSAPP -->
+    <div class="container-contact">
+      <div class="contact-1">
+        <div class="contact">
+          <p class="text-center">hubungi kami :</p>
+          <a href="https://wa.me/6285659519463/?text=Hello" target="_blank">
+            <div class="whatsapp"></div>
+          </a>
+          <div class="close">x</div>
         </div>
       </div>
     </div>
 
     <!-- JUMBOTRON -->
-    <section class="jumbotron">
-      <section class="container-mid">
-        <div class="container-jumbotron">
-          <div class="left"></div>
-          <div class="kanan-atas">
-            <input type="text" placeholder="search" />
-            <button>klik</button>
+    <section class="jumbotron container-fluid">
+      <!-- UBAH JADI GRID -->
+      <section class="container container-mid">
+        <!-- UBAH JADI ROW-->
+        <div class="row container-jumbotron">
+          <!-- UBAH JADI COLOM -->
+          <div class="col list">
+            <!-- FOTO KIRI-->
+            <!-- berubah ketika sudah di klik -->
+            <img src="foto/nastar1.jpg" alt="" class="human">
+            <!-- KANAN ATAS -->
+            <div class="kanan-atas">
+              <p>pilih & buy</p>
+              <!-- KANAN TENGAH -->
+              <div id="kanan-tengah"></div>
+              </div>
+            </div>
           </div>
-          <div class="kanan-tengah">kotak3</div>
-          <div class="kanan-bawah">kotak4</div>
         </div>
       </section>
 
       <!-- MARKETPLACE -->
-      <section class="container-market">
-        <div class="foto1">kotak</div>
-        <div class="foto2">kotak</div>
-        <div class="foto3">kotak</div>
-        <div class="foto4">kotak</div>
+      <section class="container-market container-fluid">
+        <p>semuanya ada disini</p>
+        <div class="image-slider">
+          <div class="arrow-left">
+            <i data-feather="chevron-left"></i>
+          </div>
+          <div class="arrow-right">
+            <i data-feather="chevron-right"></i>
+          </div>
+          <div class="caption">
+            <h1>Kue lebaran</h1>
+            <p>enak sekali</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row container m-auto ps">
+            <div class="col p">library</div>
+          </div>
+          <div class="container ss">
+            <div class="row images-1" id="cardsMarketPlace"></div>
+            <div class="row images-2" id="cardsMarketPlace2"></div>
+          </div>
+        </div>
       </section>
     </section>
 
     <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <div class="flex">
-          <div class="kiri">kotak1</div>
-          <div class="mid">kotak2</div>
-          <div class="kanan">kotak3</div>
-        </div>
-        <div class="flex">
-          <div class="kiri">kotak1</div>
-          <div class="mid">kotak2</div>
-          <div class="kanan">kotak3</div>
-        </div>
-        <div class="flex">
-          <div class="kiri">kotak1</div>
-          <div class="mid">kotak2</div>
-          <div class="kanan">kotak3</div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-center bungkus">
+          <div class="col-sm" id="no-1"></div>
+          <div class="col-sm" id="no-2"></div>
+          <div class="col-sm" id="no-3"></div>
         </div>
       </div>
     </footer>
-
+    
+    
     <!-- FEATHER-ICON -->
     <script>
       feather.replace();
     </script>
     <!-- SCRIPT JAVASCRIPT -->
-    <script src="script.js"></script>
+    <script src="javascript.js"></script>
+    <!-- JS BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
