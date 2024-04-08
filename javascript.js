@@ -160,13 +160,13 @@ function displayCart() {
 }
 
 //! mematikan stopPropagation pada element CartItem;
-let elementDel = document.querySelector(
-  "#shopping-cart .slide-shop .container-krj #cartItem"
-);
+// let elementDel = document.querySelector(
+//   "#shopping-cart .slide-shop .container-krj #cartItem"
+// );
 
-elementDel.addEventListener("click", function (e) {
-  e.stopPropagation();
-});
+// elementDel.addEventListener("click", function (e) {
+//   e.stopPropagation();
+// });
 
 // JUMBOTRON
 // ANIMASI
@@ -244,14 +244,17 @@ arrRight.addEventListener("click", function () {
 
 let marketPlaceProduct = [
   {
+    id: 1,
     image: "foto/nastar1.jpg",
     description: "nastar",
   },
   {
+    id: 2,
     image: `foto/salju.jpg`,
     description: "kue salju",
   },
   {
+    id: 3,
     image: `foto/kacang.jpg`,
     description: "kue kacang",
   },
@@ -259,14 +262,17 @@ let marketPlaceProduct = [
 
 let marketPlaceProduct2 = [
   {
+    id: 1,
     image: "foto/nastar1.jpg",
     description: "nastar",
   },
   {
+    id: 2,
     image: `foto/salju.jpg`,
     description: "kue salju",
   },
   {
+    id: 3,
     image: `foto/kacang.jpg`,
     description: "kue kacang",
   },
@@ -321,3 +327,25 @@ document.querySelector(".footer .container-fluid .bungkus #no-3").innerHTML = `
 <a href="https://wa.me/6285659519463/?text=Hello">klik untuk hubungi</a>
 <h5 href="">gmail :</h5>
 <p>cepifams3@gmail.com</p>`;
+
+// ! LIGHTBOX
+// ! ketika di klik
+
+let containerLightBox1 = document.querySelector(".container-market");
+let containerLb = document.querySelector(".container-lightBox");
+let containerLightBox2 = document.querySelector(
+  ".container-lightBox .gambar-1 .contain img"
+);
+
+containerLightBox1.addEventListener("click", function (e) {
+  if (e.target.className === "sport") {
+    containerLightBox2.src = e.target.src;
+    containerLb.style.display = "block";
+  }
+});
+
+containerLb.addEventListener("click", function (e) {
+  if (e.target.className === "close")
+    return (containerLb.style.display = "none");
+  return (containerLb.style.display = "block");
+});

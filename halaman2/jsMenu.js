@@ -145,3 +145,24 @@ document.querySelector(".footer .container-fluid .bungkus #no-3").innerHTML = `
 <a href="">0856******</a>
 <h5 href="">gmail</h5>
 <p>cepifams3@gmail.com</p>`;
+
+// ! LIGHTBOX
+
+let containerLightBox1 = document.querySelector(".jumbotron-produk");
+let containerLb = document.querySelector(".container-lightBox");
+let containerLightBox2 = document.querySelector(
+  ".container-lightBox .gambar-1 .contain img"
+);
+
+containerLightBox1.addEventListener("click", function (e) {
+  if (e.target.className === "produksss") {
+    containerLightBox2.src = e.target.src;
+    containerLb.style.display = "block";
+  }
+});
+
+containerLb.addEventListener("click", function (e) {
+  if (e.target.className === "close")
+    return (containerLb.style.display = "none");
+  return (containerLb.style.display = "block");
+});

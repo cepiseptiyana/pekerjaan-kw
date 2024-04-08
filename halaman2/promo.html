@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <!-- STYLE CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylePromo.css" />
     <!-- FEATHER-ICON -->
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
@@ -22,8 +22,8 @@
       <div class="logo">KueNastar</div>
       <div class="menu">
         <div class="menu-cover">
-          <p><a href="halaman2/menu.html">menu</a></p>
-          <p><a href="halaman2/promo.html">promo</a></p>
+          <p><a href="menu.html">menu</a></p>
+          <p><a href="promo.html">promo</a></p>
           <div class="kontak">
             <p class="click-p">resources</p>
           </div>
@@ -67,17 +67,42 @@
               <h2 id="total"></h2>
             </div>
           </div>
+
+          <!-- ! FORMULIR -->
+          <div class="form-container">
+            <form action="" id="checkoutForm">
+              <input type="hidden" name="items" class="cart">
+              <input type="hidden" name="total" class="total">
+              <h5>Custumer Detail</h5>
+
+              <label for="name">
+                <span>name</span>
+                <input type="text" name="name" id="name">
+              </label>
+              <label for="email">
+                <span>email</span>
+                <input type="email" name="email" id="email">
+              </label>
+              <label for="phone">
+                <span>phone</span>
+                <input type="number" name="phone" id="phone">
+              </label>
+              
+              <button class="checkoutButton disable" type="submit" id="checkoutButton" value="checkout">Checkout</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- ! nav kiri -->
     <div class="nav-left">
-      <a href="index.html" class="p-produk-2">Halaman</a>
-      <a href = "halaman2/menu.html" class="p-produk-1">Menu</a>
+      <a href="../index.html" class="p-produk-2">Halaman</a>
+      <a href = "menu.html" class="p-produk-1">Menu</a>
       <a href="#">nastar</a>
     </div>
-    <!-- KONTAK WHATSAPP -->
+
+    <!-- ! KONTAK WHATSAPP -->
     <div class="container-contact">
       <div class="contact-1">
         <div class="contact">
@@ -90,56 +115,16 @@
       </div>
     </div>
 
-    <!-- JUMBOTRON -->
-    <section class="jumbotron container-fluid">
-      <!-- UBAH JADI GRID -->
-      <section class="container container-mid">
-        <!-- UBAH JADI ROW-->
-        <div class="row container-jumbotron">
-          <!-- UBAH JADI COLOM -->
-          <div class="col list">
-            <!-- FOTO KIRI-->
-            <!-- berubah ketika sudah di klik -->
-            <img src="foto/nastar1.jpg" alt="" class="human">
-            <!-- KANAN ATAS -->
-            <div class="kanan-atas">
-              <p class="bg-warning">pilih & beli</p>
-              <!-- KANAN TENGAH -->
-              <div id="kanan-tengah"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MARKETPLACE -->
-      <section class="container-market container-fluid">
-        <p>semuanya ada disini</p>
-        <div class="image-slider">
-          <div class="arrow-left">
-            <i data-feather="chevron-left"></i>
-          </div>
-          <div class="arrow-right">
-            <i data-feather="chevron-right"></i>
-          </div>
-          <div class="caption">
-            <h1>Kue lebaran</h1>
-            <p>enak sekali</p>
-          </div>
-        </div>
+    
+    
+    <!-- ! PRODUK JUMBOTRON -->
+      <section class="jumbotron-produk">
         <div class="container">
-          <div class="row container m-auto ps">
-            <div class="col p">library</div>
-          </div>
-          <div class="container ss">
-            <div class="row images-1" id="cardsMarketPlace"></div>
-            <div class="row images-2" id="cardsMarketPlace2"></div>
-          </div>
+          <div class="row produk-br-1" id="produk-1"></div>
         </div>
       </section>
-    </section>
 
-    <!-- ! LIGHTBOX GAMBAR PRODUK -->
+       <!-- ! LIGHTBOX GAMBAR PRODUK -->
     <div class="container-fluid container-lightBox">
       <div class="gambar-1">
         <div class="contain">
@@ -166,7 +151,8 @@
       feather.replace();
     </script>
     <!-- SCRIPT JAVASCRIPT -->
-    <script src="javascript.js"></script>
+    <script src="scriptPromo.js"></script>
+
     <!-- JS BOOTSTRAP -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
