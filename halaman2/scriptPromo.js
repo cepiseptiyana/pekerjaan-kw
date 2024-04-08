@@ -44,7 +44,7 @@ window.addEventListener("click", function (e) {
 });
 
 // SHOPPING-CART NAVBAR
-let shCart = document.querySelector("#shopping-cart");
+let shCart = document.querySelector("#shopping-cart .i .feather");
 let slideShop = document.querySelector(
   ".nav-container #shopping-cart .slide-shop"
 );
